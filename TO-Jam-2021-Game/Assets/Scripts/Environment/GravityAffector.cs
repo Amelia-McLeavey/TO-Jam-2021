@@ -10,15 +10,18 @@ public class GravityAffector : MonoBehaviour
     public bool _affectedByGravity;
 
     public Rigidbody2D _rigidBody;
-    // scales the action speed of everything done by this transformer
-    public float _gravityBaseScaleValue = 1.0f;
 
-    private void FixedUpdate()
+    // scales the action speed of everything done by this transformer
+    float _gravityBaseScaleValue;
+
+    // set gravity scale ebase value to the inspector set value in the rigidbody
+    private void Start()
     {
-        _rigidBody.velocity = new Vector2();
+        _gravityBaseScaleValue = _rigidBody.gravityScale;
     }
 
-    private void Update()
+
+    private void FixedUpdate()
     {
         // convert the bool to an int
         int abgInt = _affectedByGravity ? 1 : 0;
