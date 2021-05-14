@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 3817459708208746351}
   - component: {fileID: 3817459708208746346}
   m_Layer: 11
-  m_Name: Platform
+  m_Name: GravityEffectedPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -74,7 +74,6 @@ public class DynamicPlatformController : MonoBehaviour
     public void QueueVatorPlatformMovement()
     {
         _floating = true;
-
     }
 
     // floats the platform
@@ -84,7 +83,7 @@ public class DynamicPlatformController : MonoBehaviour
     }
 
     // sets the slow multiplier for this object
-    public void SetSlowMultiplier()
+    public void SetSlowMultiplier(float slowMultiplier, float duration)
     {
 
     }
