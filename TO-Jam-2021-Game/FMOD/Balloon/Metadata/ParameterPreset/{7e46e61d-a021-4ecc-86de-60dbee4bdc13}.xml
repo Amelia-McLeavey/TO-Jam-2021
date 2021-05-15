@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{7e46e61d-a021-4ecc-86de-60dbee4bdc13}">
+		<property name="name">
+			<value>RockAction</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5a6a69ec-e7c2-4f83-904c-067fe101022b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{12be41a5-1ad7-40b8-850c-cd9df5e213fb}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{12be41a5-1ad7-40b8-850c-cd9df5e213fb}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
