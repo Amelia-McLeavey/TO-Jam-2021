@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 4757152246827792868, guid: 7c23ff787103dd94cb1149008c6479cd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4757152246827792868, guid: 7c23ff787103dd94cb1149008c6479cd,
         type: 3}
@@ -301,7 +301,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -450,17 +450,17 @@ PrefabInstance:
     - target: {fileID: 168562702114895876, guid: f8b5f740bc0d172409446f5abab76c13,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 168562702114895876, guid: f8b5f740bc0d172409446f5abab76c13,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.25
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 168562702114895876, guid: f8b5f740bc0d172409446f5abab76c13,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4812117
+      value: -3.43
       objectReference: {fileID: 0}
     - target: {fileID: 168562702114895876, guid: f8b5f740bc0d172409446f5abab76c13,
         type: 3}
@@ -509,3 +509,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b5f740bc0d172409446f5abab76c13, type: 3}
+--- !u!1 &2137930057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 168562702114895897, guid: f8b5f740bc0d172409446f5abab76c13,
+    type: 3}
+  m_PrefabInstance: {fileID: 1892322803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2137930058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137930057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b82d4152fe02644b54981a8d144f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restart: 0

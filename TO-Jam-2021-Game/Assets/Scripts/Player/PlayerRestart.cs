@@ -7,17 +7,20 @@ public class PlayerRestart : MonoBehaviour
     // Player spawn (wherever the player has been placed in the world)
     private Vector3 playerSpawn;
 
+    // Player's position when collided with end point
+    private Vector3 playerEndPointPos;
+
     // Player rigidbody
-    private Rigidbody rb;
+    private Rigidbody2D rb;
 
     // Bool to flip when player needs to resart
     public bool restart = false;
 
     // How much to move the player vertaically
-    private float liftHeight = 7f;
+    private float liftHeight = 3f;
 
     // Movement speed
-    private float liftSpeed = 5f;
+    private float liftSpeed = 0.5f;
 
     // Bools for restart transition states
     private bool lifting = false;
@@ -30,7 +33,7 @@ public class PlayerRestart : MonoBehaviour
         playerSpawn = gameObject.transform.position;
 
         // Get player's rigidbody
-        rb = gameObject.GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -50,7 +53,7 @@ public class PlayerRestart : MonoBehaviour
                 gameObject.transform.Translate(0, liftSpeed, 0);
 
                 // If the player has reached the lift height,
-                if (gameObject.transform.position.y == liftHeight)
+                if (gameObject.transform.position.y >= playerEndPointPos.y + liftHeight)
                 {
                     // Player goes into the moving state
                     lifting = false;
@@ -59,18 +62,21 @@ public class PlayerRestart : MonoBehaviour
             }
             // Player then moves above their spawn point
             else if (moving == true)
-            {
+           {
                 // Move towards spawn point
-                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector2(playerSpawn.x, playerSpawn.y + liftHeight), 0f);
+                Vector2 moveToSpawn = Vector2.MoveTowards(gameObject.transform.position, new Vector2(playerSpawn.x, playerSpawn.y + liftHeight), liftSpeed);
+                gameObject.transform.Translate(moveToSpawn, Space.World);
 
                 // If above spawn point,
-                if (gameObject.transform.position == new Vector3(playerSpawn.x, playerSpawn.y + liftHeight))
+                if (gameObject.transform.position.x == playerSpawn.x)
                 {
                     // Player falls onto spawn
                     moving = false;
+                    restart = false;
 
-                    // Gravity turns back on
-                    rb.useGravity = true;
+                    // Gravity & simulated turns back on
+                    rb.gravityScale = 1;
+                    rb.simulated = true;
 
                     // Unlock player movement
                 }
@@ -88,8 +94,12 @@ public class PlayerRestart : MonoBehaviour
 
             // Lock player movement
 
-            // Turn off gravity
-            rb.useGravity = false;
+            // Turn off gravity & simulated to allow lift
+            rb.gravityScale = 0;
+            rb.simulated = false;
+
+            // Save the player's position when they entered the end point collider
+            playerEndPointPos = gameObject.transform.position;
 
             // Player is in the lifting state
             lifting = true;
