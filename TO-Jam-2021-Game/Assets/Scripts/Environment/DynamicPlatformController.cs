@@ -26,15 +26,18 @@ public class DynamicPlatformController : MonoBehaviour
     [Header("Universal Behavior Variables")]
     public Vector3 _startingPosition;
     public float _tranlateSpeed = 1.0f;
+
     // position the platform is translating towards
     public Vector3 _target = new Vector2();
     public float _slowMultiplier = 1.0f;
+
     // toggles whether or not this platform is affected by gravity
     public bool _affectedByGravity = true;
 
     [Header("Vator Variables")]
     public string _vatorType;
     public bool _isHorizontal = false;
+
     // stored positions the platform can move to 
     public GameObject _floatTarget1;
     public GameObject _floatTarget2;
@@ -48,6 +51,7 @@ public class DynamicPlatformController : MonoBehaviour
     {
         _gravityBaseScaleValue = _rigidbody.gravityScale;
         _startingPosition = transform.position;
+
         // ensure that starting position z is ignored
         _startingPosition.z = 0; 
     }
@@ -96,7 +100,6 @@ public class DynamicPlatformController : MonoBehaviour
                 _target = _startingPosition;
             }
         }
-
     }
 
     // update gravity
@@ -118,6 +121,7 @@ public class DynamicPlatformController : MonoBehaviour
     {
         // set the temp delta to the difference between the target position and the player position
         Vector3 delta = (_target - transform.position);
+
         // ensure that we are ignoring the z axis
         delta.z = 0; 
         float distToTarget = delta.magnitude;        
@@ -137,7 +141,7 @@ public class DynamicPlatformController : MonoBehaviour
             _translating = false;
 
             // only store that we are at the target position if this target position is not the start position
-            if(_target != _startingPosition)
+            if(_target != _startingPosition && !_binaryVatorPlatform)
             {
                 _atTargetPosition = true;
             }
@@ -151,7 +155,7 @@ public class DynamicPlatformController : MonoBehaviour
     // queues a float for this platform
     public void QueueMovement(Vector2 playerPosition, float emotionRadius, float duration, string type)
     {
-        if(_vatorType == type)
+        if(_vatorType == type || _vatorType == "Universal")
         {
             if (_binaryVatorPlatform)
             {
@@ -159,7 +163,7 @@ public class DynamicPlatformController : MonoBehaviour
             }
             else
             {
-                QueuePlatformMovement(playerPosition, emotionRadius, duration);
+                QueuePlatformMovement(playerPosition, emotionRadius, duration, type);
             }
         }
     }
@@ -168,16 +172,38 @@ public class DynamicPlatformController : MonoBehaviour
     public void QueueVatorPlatformMovement()
     {
         _translating = true;
+
+        if(_target == _floatTarget1.transform.position)
+        {
+            _target = _floatTarget2.transform.position;
+        } else
+        {
+            _target = _floatTarget1.transform.position;
+        }
     }
 
-    // floats the platform
-    public void QueuePlatformMovement(Vector2 playerPosition, float emotionRadius, float duration)
+    // transforms a platform based off of the type of passed transform
+    public void QueuePlatformMovement(Vector2 playerPosition, float emotionRadius, float duration, string type)
     {
         // reset the translation timers 
         _translationTimer = 0.0f;
         _maxTimeTranslated = duration;
 
+        Vector2 tempPosition = playerPosition;
 
+        switch(type)
+        {
+            case "Shove":
+                tempPosition.x = tempPosition.x + emotionRadius + (gameObject.GetComponent<BoxCollider2D>().size.x / 2);
+                tempPosition.y = gameObject.transform.position.y;
+                break;
+            case "Float":
+                tempPosition.y = tempPosition.y + emotionRadius - (gameObject.GetComponent<BoxCollider2D>().size.y / 2);
+                tempPosition.x = gameObject.transform.position.x;
+                break;
+        }
+
+        _target = tempPosition;
     }
 
     // sets the slow multiplier for this object
@@ -194,8 +220,9 @@ public class DynamicPlatformController : MonoBehaviour
     // ensure that when this collides with another object it stops its translation immediately
     private void OnCollisionEnter(Collision collision)
     {
-        
-        /// !!! NEEDS TO HAVE DETECTION FOR COLLISIONS TO STOP TRANSLATION ON COLLISION !!!
-
+       if(collision.gameObject.layer == gameObject.layer)
+        {
+            _translating = false;
+        }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4757152246478105186}
   - component: {fileID: 4757152246478105197}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: MovePoint1
   m_TagString: Moving
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4757152246827792868}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: MovingPlatform
   m_TagString: Moving
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4757152247317514806}
   - component: {fileID: 4757152247317514801}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: MovePoint2
   m_TagString: Moving
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4757152247699215776}
   - component: {fileID: 4757152247699215782}
   - component: {fileID: 4757152247699215777}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Platform
   m_TagString: Moving
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4757152248356575798}
   - component: {fileID: 4757152248356575799}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: TempSprite
   m_TagString: Moving
   m_Icon: {fileID: 0}
