@@ -19,14 +19,14 @@ public class BalloonAOE : MonoBehaviour
         DebugDrawAOE(keyPressed);
 
         // Get a reference to the dynamic platform layer mask
-        LayerMask dynamicPlatformLayerMask = LayerMask.GetMask("DynamicPlatforms");
+        LayerMask dynamicPlatformLayerMask = LayerMask.GetMask("Platform");
 
         // Determine targets that have been hit, store in an array
         Collider[] hitDynamicPlatforms = Physics.OverlapSphere(gameObject.transform.position, AOERadius, dynamicPlatformLayerMask);
         Debug.Log($"Number of hit dynamic platforms = {hitDynamicPlatforms.Length}");
 
         // Send info to the hit dynamic platforms
-        foreach (Collider dynamicPlatform in hitDynamicPlatforms)
+        foreach (Collider platform in hitDynamicPlatforms)
         {
             // Call method in platform's controller to set the passed variables depending on keyPressed
             switch(keyPressed)
