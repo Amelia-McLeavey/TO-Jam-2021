@@ -6,7 +6,7 @@ public class BallonMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     public Transform holder;
-    private Rigidbody2D holderRb;
+    public Rigidbody2D holderRb;
     public float ropeLength;
     public float maxMoveSpeed;
     public float xOffset = 0.1f;
@@ -32,7 +32,7 @@ public class BallonMovement : MonoBehaviour
        segmentLength = Mathf.FloorToInt(ropeLength / ropeSegLen);
         startScale = this.transform.localScale.x;
         rb = this.GetComponent<Rigidbody2D>();
-        holderRb = holder.GetComponent<Rigidbody2D>();
+        //holderRb = holder.GetComponent<Rigidbody2D>();
         this.lineRenderer = this.GetComponent<LineRenderer>();
         Vector3 ropeStartPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

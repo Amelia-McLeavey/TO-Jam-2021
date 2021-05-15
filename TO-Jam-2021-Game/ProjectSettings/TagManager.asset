@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Moving
   layers:
   - Default
   - TransparentFX
@@ -13,12 +14,12 @@ TagManager:
   - UI
   - 
   - 
+  - Player
   - 
   - 
   - 
   - 
-  - 
-  - 
+  - Platform
   - 
   - 
   - 
@@ -30,7 +31,7 @@ TagManager:
   - 
   - 
   - Balloon
-  - Player
+  - 
   - BurstBalloon
   - 
   - 
