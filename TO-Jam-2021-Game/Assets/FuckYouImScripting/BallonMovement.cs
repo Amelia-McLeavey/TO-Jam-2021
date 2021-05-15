@@ -19,11 +19,17 @@ public class BallonMovement : MonoBehaviour
 
     private bool BalloonHasBurst=false;
 
+    private Animator anim;
+
     public bool burstNow=false;
 
     void Start()
     {
-        segmentLength = Mathf.FloorToInt(ropeLength / ropeSegLen);
+        anim = this.GetComponent<Animator>();
+
+        anim.Play(0, -1, Random.Range(0f, 1f));
+
+       segmentLength = Mathf.FloorToInt(ropeLength / ropeSegLen);
         startScale = this.transform.localScale.x;
         rb = this.GetComponent<Rigidbody2D>();
         holderRb = holder.GetComponent<Rigidbody2D>();
@@ -52,6 +58,11 @@ public class BallonMovement : MonoBehaviour
             //find pos on radius circle
             //outOfRange();
             dragBalloons(maxMoveSpeed*3f);
+
+            if(Vector2.Distance(this.transform.position, holder.position) > 3* ropeLength)
+            {
+                this.transform.position = holder.position;
+            }
         }
         else
         {
@@ -102,9 +113,7 @@ public class BallonMovement : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.1f);
-            //rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(Mathf.Sin(Time.deltaTime*1000)*0.6f, Mathf.Cos(Time.deltaTime * 1000) * 0.6f), 0.1f);
-
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.1f);            
         }
     }
 
@@ -112,7 +121,7 @@ public class BallonMovement : MonoBehaviour
     {
         //play animation of the burst
         BalloonHasBurst = true;
-        this.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f) * startScale;
+        anim.SetTrigger("Burst");
         rb.gravityScale = 1f;
         this.gameObject.layer = 26;
         StartCoroutine(refillBalloon());
@@ -123,8 +132,8 @@ public class BallonMovement : MonoBehaviour
         yield return new WaitForSeconds(5f);
         BalloonHasBurst = false;
         rb.gravityScale = -0.01f;
-        //animation refil
-        this.transform.localScale = new Vector3(1f, 1f, 1f) * startScale;
+        anim.SetTrigger("Refill");
+       
         this.gameObject.layer = 24;
 
     }
