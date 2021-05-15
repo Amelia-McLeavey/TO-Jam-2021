@@ -9,14 +9,11 @@ public class TutorialPopups : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private Vector3 offset;
-
-    [SerializeField]
     private GameKeyCode keyCodeToDismiss;
 
-    private SpriteRenderer inputPrompt;
+    private SpriteRenderer inputGraphic;
 
-    private bool triggered = false;
+    private bool triggered;
 
     private int[] values;
     private bool[] keys;
@@ -25,8 +22,8 @@ public class TutorialPopups : MonoBehaviour
 
     private void Start()
     {
-        inputPrompt = GetComponentInChildren<SpriteRenderer>();
-        inputPrompt.enabled = false;
+        inputGraphic = GetComponentInChildren<SpriteRenderer>();
+        inputGraphic.enabled = false;
         
         // Initialize array of custom enums, cast to int
         values = (int[])System.Enum.GetValues(typeof(GameKeyCode));
@@ -37,7 +34,18 @@ public class TutorialPopups : MonoBehaviour
 
     private void Update()
     {
+        // The BoxCollider2D for this system is located on the child "Trigger" of the main parent object "Teach Volume"
+        triggered = GetComponentInChildren<TutorialTriggerCheck>().triggered;
+
+        UpdateGraphicVisibility();
         CheckForCorrectInputIfTriggered();
+    }
+
+    private void UpdateGraphicVisibility()
+    {
+        if (triggered)
+        { inputGraphic.enabled = false; } 
+        else { inputGraphic.enabled = false; }
     }
 
     private void CheckForCorrectInputIfTriggered()
@@ -59,23 +67,6 @@ public class TutorialPopups : MonoBehaviour
                     }
                 }
             }
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            triggered = true;
-            inputPrompt.enabled = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            inputPrompt.enabled = false;
         }
     }
 }
