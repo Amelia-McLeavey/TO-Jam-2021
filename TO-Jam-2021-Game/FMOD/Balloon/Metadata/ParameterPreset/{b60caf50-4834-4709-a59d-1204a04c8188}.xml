@@ -16,10 +16,16 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>4</value>
+			<value>5</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
 		</property>
 		<relationship name="automators">
 			<destination>{b475e03c-0e8b-433d-84cd-27285a1f1186}</destination>
