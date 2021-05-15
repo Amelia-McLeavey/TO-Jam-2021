@@ -19,29 +19,29 @@ public class BalloonAOE : MonoBehaviour
         DebugDrawAOE(keyPressed);
 
         // Get a reference to the dynamic platform layer mask
-        LayerMask dynamicPlatformLayerMask = LayerMask.GetMask("DynamicPlatforms");
+        LayerMask dynamicPlatformLayerMask = LayerMask.GetMask("Platform");
 
         // Determine targets that have been hit, store in an array
         Collider[] hitDynamicPlatforms = Physics.OverlapSphere(gameObject.transform.position, AOERadius, dynamicPlatformLayerMask);
         Debug.Log($"Number of hit dynamic platforms = {hitDynamicPlatforms.Length}");
 
         // Send info to the hit dynamic platforms
-        foreach (Collider dynamicPlatform in hitDynamicPlatforms)
+        foreach (Collider platform in hitDynamicPlatforms)
         {
             // Call method in platform's controller to set the passed variables depending on keyPressed
             switch(keyPressed)
             {
                 // JOY | FLOAT
                 case "J":
-                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
+                    platform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
                     break;
                 // ANGER | SHOVE
                 case "K":
-                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
+                    platform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
                     break;
                 // SAD | SLOW
                 case "L":
-                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().SetSlowMultiplier(slowMultiplier, effectDuration);
+                    platform.gameObject.GetComponent<DynamicPlatformController>().SetSlowMultiplier(slowMultiplier, effectDuration);
                     break;
                 default:
                     Debug.LogError("No match for keyPressed");
@@ -50,7 +50,7 @@ public class BalloonAOE : MonoBehaviour
         }
     }
 
-    // A temporary Debug Draw method to show us where the area of effect is until we have a proper VFX
+    // A temporary Debug Draw method to show us where the area of effect is until we have a proper VFX, only visible in Scene view.
     private void DebugDrawAOE(string keyPressed)
     {
         float duration = 2f;
