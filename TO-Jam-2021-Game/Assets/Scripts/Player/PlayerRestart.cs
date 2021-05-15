@@ -55,6 +55,9 @@ public class PlayerRestart : MonoBehaviour
                 // If the player has reached the lift height,
                 if (gameObject.transform.position.y >= playerEndPointPos.y + liftHeight)
                 {
+                    // Set player pos to the exact end point
+                    gameObject.transform.position = new Vector2(playerEndPointPos.x, playerEndPointPos.y + liftHeight);
+
                     // Player goes into the moving state
                     lifting = false;
                     moving = true;
@@ -64,11 +67,11 @@ public class PlayerRestart : MonoBehaviour
             else if (moving == true)
            {
                 // Move towards spawn point
-                Vector2 moveToSpawn = Vector2.MoveTowards(gameObject.transform.position, new Vector2(playerSpawn.x, playerSpawn.y + liftHeight), liftSpeed);
-                gameObject.transform.Translate(moveToSpawn, Space.World);
+                Vector2 moveToSpawn = Vector2.MoveTowards(new Vector2(playerEndPointPos.x, playerEndPointPos.y + liftHeight), new Vector2(playerSpawn.x, playerSpawn.y + liftHeight), liftSpeed);
+                gameObject.transform.Translate(moveToSpawn.x, 0f, 0f, Space.World);
 
                 // If above spawn point,
-                if (gameObject.transform.position.x == playerSpawn.x)
+                if (gameObject.transform.position.x <= playerSpawn.x)
                 {
                     // Player falls onto spawn
                     moving = false;
