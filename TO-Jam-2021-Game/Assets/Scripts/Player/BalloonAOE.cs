@@ -6,7 +6,7 @@ public class BalloonAOE : MonoBehaviour
 {
     [Range(0, 10)]
     [SerializeField]
-    private float AOERadius = 1.0f;
+    private float AOERadius = 2.0f;
     [Range(0, 10)]
     [SerializeField]
     private float effectDuration = 1.0f;
@@ -18,34 +18,43 @@ public class BalloonAOE : MonoBehaviour
     {
         DebugDrawAOE(keyPressed);
 
-        // Get a reference to the dynamic platform layer mask
-        LayerMask dynamicPlatformLayerMask = LayerMask.GetMask("Platform");
+        // Get a reference to the platform layer mask
+        LayerMask platformLayerMask = LayerMask.GetMask("Platform");
 
         // Determine targets that have been hit, store in an array
-        Collider[] hitDynamicPlatforms = Physics.OverlapSphere(gameObject.transform.position, AOERadius, dynamicPlatformLayerMask);
-        Debug.Log($"Number of hit dynamic platforms = {hitDynamicPlatforms.Length}");
+        Collider2D[] hitPlatforms = Physics2D.OverlapCircleAll(gameObject.transform.position, AOERadius, platformLayerMask);
+        Debug.Log($"Number of hit platforms = {hitPlatforms.Length}");
 
         // Send info to the hit dynamic platforms
-        foreach (Collider platform in hitDynamicPlatforms)
+        foreach (Collider2D platform in hitPlatforms)
         {
-            // Call method in platform's controller to set the passed variables depending on keyPressed
-            switch(keyPressed)
+            // Filter the hit platforms by attached script
+            if (platform.GetComponent<DynamicPlatformController>())
             {
-                // JOY | FLOAT
-                case "J":
-                    platform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
-                    break;
-                // ANGER | SHOVE
-                case "K":
-                    platform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
-                    break;
-                // SAD | SLOW
-                case "L":
-                    platform.gameObject.GetComponent<DynamicPlatformController>().SetSlowMultiplier(slowMultiplier, effectDuration);
-                    break;
-                default:
-                    Debug.LogError("No match for keyPressed");
-                    break;
+                Debug.Log($"Filtered Platform Name: {platform.name}");
+
+                // Call method in platform's controller to set the passed variables depending on keyPressed
+                switch (keyPressed)
+                {
+                    // JOY | FLOAT
+                    case "J":
+                        //Debug.Log("J Reached");
+                        platform.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
+                        break;
+                    // ANGER | SHOVE
+                    case "K":
+                        //Debug.Log("K Reached");
+                        platform.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
+                        break;
+                    // SAD | SLOW
+                    case "L":
+                        //Debug.Log("L Reached");
+                        platform.GetComponent<DynamicPlatformController>().SetSlowMultiplier(slowMultiplier, effectDuration);
+                        break;
+                    default:
+                        Debug.LogError("No match for keyPressed");
+                        break;
+                }
             }
         }
     }
