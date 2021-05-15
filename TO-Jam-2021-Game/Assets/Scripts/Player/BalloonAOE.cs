@@ -33,15 +33,15 @@ public class BalloonAOE : MonoBehaviour
             {
                 // JOY | FLOAT
                 case "J":
-                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
+                    platform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
                     break;
                 // ANGER | SHOVE
                 case "K":
-                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
+                    platform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
                     break;
                 // SAD | SLOW
                 case "L":
-                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().SetSlowMultiplier(slowMultiplier, effectDuration);
+                    platform.gameObject.GetComponent<DynamicPlatformController>().SetSlowMultiplier(slowMultiplier, effectDuration);
                     break;
                 default:
                     Debug.LogError("No match for keyPressed");
@@ -50,7 +50,7 @@ public class BalloonAOE : MonoBehaviour
         }
     }
 
-    // A temporary Debug Draw method to show us where the area of effect is until we have a proper VFX
+    // A temporary Debug Draw method to show us where the area of effect is until we have a proper VFX, only visible in Scene view.
     private void DebugDrawAOE(string keyPressed)
     {
         float duration = 2f;
