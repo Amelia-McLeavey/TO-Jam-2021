@@ -369,6 +369,19 @@ public class PlayerController : MonoBehaviour
         {
             xLastInputFacingDirection = input.x;
         }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            GetComponent<BalloonAOE>().PopBalloon("J");
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            GetComponent<BalloonAOE>().PopBalloon("K");
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            GetComponent<BalloonAOE>().PopBalloon("L");
+        }
     }
 
     #endregion

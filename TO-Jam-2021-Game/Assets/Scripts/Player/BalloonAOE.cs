@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class BalloonAOE : MonoBehaviour
 {
-
     [Range(0, 10)]
     [SerializeField]
     private float AOERadius = 1.0f;
-
     [Range(0, 10)]
     [SerializeField]
     private float effectDuration = 1.0f;
-
     [Range(0, 10)]
     [SerializeField]
     private float slowMultiplier = 2.0f;
 
     public void PopBalloon(string keyPressed)
     {
-        DebugDrawAOE();
+        DebugDrawAOE(keyPressed);
 
         // Get a reference to the dynamic platform layer mask
         LayerMask dynamicPlatformLayerMask = LayerMask.GetMask("DynamicPlatforms");
@@ -36,15 +33,15 @@ public class BalloonAOE : MonoBehaviour
             {
                 // JOY | FLOAT
                 case "J":
-                    //dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
+                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
                     break;
                 // ANGER | SHOVE
                 case "K":
-                    //dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
+                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, effectDuration, keyPressed);
                     break;
                 // SAD | SLOW
                 case "L":
-                    //dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().SetSlowMultiplier(slowMultiplier, effectDuration);
+                    dynamicPlatform.gameObject.GetComponent<DynamicPlatformController>().SetSlowMultiplier(slowMultiplier, effectDuration);
                     break;
                 default:
                     Debug.LogError("No match for keyPressed");
@@ -53,12 +50,30 @@ public class BalloonAOE : MonoBehaviour
         }
     }
 
-    private void DebugDrawAOE()
+    // A temporary Debug Draw method to show us where the area of effect is until we have a proper VFX
+    private void DebugDrawAOE(string keyPressed)
     {
         float duration = 2f;
         float quality = 32;
         float singleSegmentAngle = 2 * Mathf.PI / quality;
 
+        // Set the color of the line for basic legibility
+        Color color;
+        if (keyPressed == "J")
+        {
+            color = Color.yellow;
+        } else if (keyPressed == "K")
+        {
+            color = Color.red;
+        } else if (keyPressed == "L")
+        {
+            color = Color.blue;
+        } else
+        {
+            color = Color.white;
+        }
+
+        // Use drawlines to draw circle
         for (int segment = 0; segment < quality; ++segment)
         {
             float angleOne = segment * singleSegmentAngle;
@@ -71,7 +86,7 @@ public class BalloonAOE : MonoBehaviour
 
             endpoint *= AOERadius;
 
-            Debug.DrawLine(this.gameObject.transform.position + startpoint, this.gameObject.transform.position + endpoint, Color.yellow, duration);
+            Debug.DrawLine(this.gameObject.transform.position + startpoint, this.gameObject.transform.position + endpoint, color, duration);
         }
     }
 }
