@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DynamicPlatformController : MonoBehaviour
 {
+    
     [Header("Control Variables")]
     public string _type;
     // controls whether or not this is a vator floating platform
@@ -22,6 +23,7 @@ public class DynamicPlatformController : MonoBehaviour
     public bool _floating = false;
     public bool _gravityLocked = false;
 
+    //its falling if everything is false but affected by grav true
     [Header("Timers")]
     public float _slowTimer;
     public float _maxTimeSlowed;
@@ -47,10 +49,16 @@ public class DynamicPlatformController : MonoBehaviour
     public GameObject _transformTarget1;
     public GameObject _transformTarget2;
 
+
+
     #region Initialization
 
+    PlatformAudio m_audio;
+    
+    
     private void Start()
     {
+     
         _gravityBaseScaleValue = _rigidbody.gravityScale;
         
         // ensure the platform starts at its transformTarget1 position if there is one
@@ -63,6 +71,8 @@ public class DynamicPlatformController : MonoBehaviour
         {
             transform.position = _transformTarget1.transform.position;
         }
+
+        m_audio = GetComponent<PlatformAudio>();
     }
 
     #endregion
@@ -73,6 +83,8 @@ public class DynamicPlatformController : MonoBehaviour
         UpdateTimers();
 
         UpdateMotion();
+
+     
 
     }
 
@@ -212,18 +224,27 @@ public class DynamicPlatformController : MonoBehaviour
             {
                 QueuePlatformMovement(playerPosition, emotionRadius, duration, type);
             }
+
+            m_audio.PlayRock(1,duration);
         }
     }
+
+   
 
     // swaps the elevator float target and sets the platform to be floating
     public void QueueVatorPlatformMovement(float duration)
     {
+        //FMOD either translate XoY means moving
         if(_horizontalVator)
         {
             _translatingX = true;
         } else
         {
             _translatingY = true;
+        }
+        if (_translatingX || _translatingY)
+        {
+          
         }
 
         if(_target == _transformTarget2.transform.position)
@@ -276,12 +297,25 @@ public class DynamicPlatformController : MonoBehaviour
 
     #endregion
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       
+    }
     // ensure that when this collides with another object it stops its translation immediately
     private void OnCollisionEnter(Collision collision)
     {
-       if(collision.gameObject.layer == gameObject.layer)
+
+        // m_audio.PlayRock(0, 3);  - Ground -platform
+
+
+        if (collision.gameObject.layer == gameObject.layer)
         {
+
+
   // !!!!          _translating = false;
+
+
 
         }
     }
