@@ -1257,6 +1257,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3733722602127851825, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69eec6aaf48444eb5de5026af087c5, type: 3}
 --- !u!1001 &5415259044563007040
@@ -1894,6 +1899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585709792049408556, guid: d7a73815a27fa724884000a6a9464404,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8585709792049408557, guid: d7a73815a27fa724884000a6a9464404,
         type: 3}
