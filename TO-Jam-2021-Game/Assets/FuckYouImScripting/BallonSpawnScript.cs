@@ -6,6 +6,7 @@ public class BallonSpawnScript : MonoBehaviour
 {
     public GameObject balloonToSpawn;
 
+    public GameObject wordToSpawn;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,8 +17,9 @@ public class BallonSpawnScript : MonoBehaviour
             BallonMovement bm = newBalloon.GetComponent<BallonMovement>();
             bm.holder = GameObject.Find("Holder").transform;
             bm.holderRb = collision.GetComponent<Rigidbody2D>();
-
+            wordToSpawn.SetActive(true);
             Destroy(this.gameObject);
         }
     }
+
 }
