@@ -73,8 +73,11 @@ public class MainMenu : MonoBehaviour
         // Turn off currently loaded canvas
         currentCanvas.SetActive(false);
 
-        // Turn on poping object
-        balloonToPop.SetActive(true);
+        // Turn on poping object, if available
+        if (balloonToPop != null)
+        {
+            balloonToPop.SetActive(true);
+        }
     }
 
     public void BackToMenuButton()

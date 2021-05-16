@@ -21,11 +21,6 @@ public class BalloonPop : MonoBehaviour
         // Anim should play automatically
     }
 
-    void Update()
-    {
-        
-    }
-
     public void Deactivate()
     {
         // Turn off gameobject when anim has finished playing
