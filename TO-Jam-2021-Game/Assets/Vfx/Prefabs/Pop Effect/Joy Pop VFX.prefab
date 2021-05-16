@@ -9678,6 +9678,7 @@ GameObject:
   - component: {fileID: 6381127539647737088}
   - component: {fileID: 6381127539647737101}
   - component: {fileID: 6381127539647737102}
+  - component: {fileID: 241713238132258191}
   m_Layer: 0
   m_Name: Joy Pop VFX
   m_TagString: Untagged
@@ -9717,7 +9718,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0
-  blitMat: {fileID: 0}
   mats:
   - {fileID: 2100000, guid: e379fb1a27596514ab3823788872f16b, type: 2}
   - {fileID: 2100000, guid: f925ce8c9e90ccf46a33f2e29ca3b6ce, type: 2}
@@ -9738,6 +9738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23dca556298756840aaad244d2f71dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emotion: 0
 --- !u!95 &6381127539647737088
 Animator:
   serializedVersion: 3
@@ -14478,6 +14479,18 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &241713238132258191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381127539647737099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e6878a3cbf0fc489fd9f3afd3ee025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6381127539939387240
 GameObject:
   m_ObjectHideFlags: 0

@@ -14638,6 +14638,7 @@ GameObject:
   - component: {fileID: 2075966343367934123}
   - component: {fileID: 2075966343367934120}
   - component: {fileID: 2075966341991510444}
+  - component: {fileID: 2325833977585664953}
   m_Layer: 0
   m_Name: Sad Pop VFX
   m_TagString: Untagged
@@ -14677,7 +14678,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0
-  blitMat: {fileID: 0}
   mats:
   - {fileID: 2100000, guid: 385c1c7e81f2d4d4c96e91484c87edcb, type: 2}
   - {fileID: 2100000, guid: ee253024caf054341a14a4e3ed13223a, type: 2}
@@ -19439,3 +19439,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emotion: 2
+--- !u!114 &2325833977585664953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075966343367934122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e6878a3cbf0fc489fd9f3afd3ee025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
