@@ -7,6 +7,7 @@ public class BalloonAudio : MonoBehaviour
     private FMOD.Studio.EventInstance pop;
     private FMOD.Studio.EventInstance emote;
     private FMOD.Studio.EventInstance inflate;
+    private FMOD.Studio.EventInstance UI;
     public void PlayPop()
     {
         pop = FMODUnity.RuntimeManager.CreateInstance("event:/BalloonPop");
@@ -29,4 +30,13 @@ public class BalloonAudio : MonoBehaviour
         inflate.start();
         inflate.release();
     }
+
+    public void PlayUI()
+    {
+        UI = FMODUnity.RuntimeManager.CreateInstance("event:/UIButton");
+        UI.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        UI.start();
+        UI.release();
+    }
+
 }
