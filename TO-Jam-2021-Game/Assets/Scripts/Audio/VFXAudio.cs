@@ -2,30 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WordDisplayHandler : MonoBehaviour
+public class VFXAudio : MonoBehaviour
 {
     private FMOD.Studio.EventInstance emote;
 
     [SerializeField]
     int emotion;
 
-    private void Start()
-    {
-        StartCoroutine(delayTime());
-        PlayEmotion();
-    }
-    private IEnumerator delayTime()
-    {
-        yield return new WaitForSeconds(4f);
-        this.gameObject.SetActive(false);
-    }
-
     public void PlayEmotion()
     {
-        emote = FMODUnity.RuntimeManager.CreateInstance("event:/EmotionPickUp");
+        emote = FMODUnity.RuntimeManager.CreateInstance("event:/Emotion");
         emote.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         emote.setParameterByName("Emotion", emotion);
         emote.start();
         emote.release();
+    }
+
+    public void StopEmotion()
+    {
+        emote.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

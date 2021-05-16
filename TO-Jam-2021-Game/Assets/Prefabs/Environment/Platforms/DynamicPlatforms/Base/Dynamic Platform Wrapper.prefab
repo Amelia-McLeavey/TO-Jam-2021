@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 9148409643358328600}
   - component: {fileID: 9148409643358328601}
   - component: {fileID: 9148409643358328602}
+  - component: {fileID: 6056845857279281815}
   m_Layer: 13
   m_Name: DynamicPlatform
   m_TagString: Moving
@@ -163,6 +164,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6056845857279281815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9148409643358328603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0995301af6a03d4f9c6ce2b29203556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9148409643694296628
 GameObject:
   m_ObjectHideFlags: 0

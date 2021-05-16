@@ -12,6 +12,13 @@ public class MovingObjectTeleporter : MonoBehaviour
     // determines whether or not this teleporter will cut the momentum of objects it teleports
     public bool maintainMomentum;
 
+    PlatformAudio m_audio;
+
+    private void Awake()
+    {
+        m_audio = GetComponent<PlatformAudio>();
+    }
+
     // check that the collision is a dynamic platform
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,6 +35,8 @@ public class MovingObjectTeleporter : MonoBehaviour
             }
 
             // teleport the object
+            //FMOD teleport audo
+            m_audio.PlayRock(4, 4);
             collision.gameObject.transform.position = TeleportLocation.transform.position;
         }
     }
