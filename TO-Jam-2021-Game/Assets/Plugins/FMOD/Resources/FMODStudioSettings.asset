@@ -417,6 +417,8 @@ MonoBehaviour:
   - Master
   Banks:
   - Character
+  - Environment
+  - UI
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
