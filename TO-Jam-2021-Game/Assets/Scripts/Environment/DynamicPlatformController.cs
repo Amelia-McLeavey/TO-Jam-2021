@@ -54,14 +54,14 @@ public class DynamicPlatformController : MonoBehaviour
         _gravityBaseScaleValue = _rigidbody.gravityScale;
         
         // ensure the platform starts at its transformTarget1 position if there is one
-        if(_transformTarget1 != null)
-        {
-            transform.position = _transformTarget1.transform.position;
-        }
-
         if(_binaryVatorPlatform && !_horizontalVator)
         {
             _gravityLocked = true;
+        }
+
+        if (_binaryVatorPlatform)
+        {
+            transform.position = _transformTarget1.transform.position;
         }
     }
 
@@ -131,9 +131,10 @@ public class DynamicPlatformController : MonoBehaviour
         {
             if(GravitationalOvershoot() && _binaryVatorPlatform)
             {
-                transform.position = _transformTarget1.transform.position;
-                _rigidbody.velocity = new Vector3(0, 0, 0);
+                _rigidbody.gravityScale = 0;
+                _rigidbody.velocity = new Vector3();
                 _gravityLocked = true;
+                transform.position = _transformTarget1.transform.position;
             } else
             {
                 UpdateGravity();

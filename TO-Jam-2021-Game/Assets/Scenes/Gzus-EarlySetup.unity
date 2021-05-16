@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39873080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.43, y: 1.77, z: -121.46875}
+  m_LocalPosition: {x: -1.78, y: 3.87, z: -121.46875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1415166928}
@@ -260,7 +260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944775907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.59, y: 0, z: 0}
+  m_LocalPosition: {x: 3.77, y: 4.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39873081}
@@ -445,15 +445,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1f999fdc45ae046892bf6671300547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: Shove
-  _binaryVatorPlatform: 1
-  _affectedByGravity: 0
-  _affectedBySlow: 1
-  _horizontalVator: 1
+  _type: Float
+  _binaryVatorPlatform: 0
+  _affectedByGravity: 1
+  _affectedBySlow: 0
+  _horizontalVator: 0
   _translatingX: 0
   _translatingY: 0
   _slowed: 0
   _floating: 0
+  _gravityLocked: 0
   _slowTimer: 0
   _maxTimeSlowed: 0
   _floatTimer: 0
@@ -505,7 +506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696841471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7, y: 0, z: 0}
+  m_LocalPosition: {x: 3.74, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39873081}
@@ -595,6 +596,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 168562702114895899, guid: f8b5f740bc0d172409446f5abab76c13,
+        type: 3}
+      propertyPath: bufferWindow
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 168562702114895899, guid: f8b5f740bc0d172409446f5abab76c13,
+        type: 3}
+      propertyPath: jumpBuffered
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b5f740bc0d172409446f5abab76c13, type: 3}
