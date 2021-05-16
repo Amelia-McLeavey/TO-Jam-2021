@@ -4887,7 +4887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c2456285688e6c459ec9b778a1e5070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxIntensity: 0
+  maxIntensity: 0.4
   intensityPercent: 0
 --- !u!199 &5026395309585139541
 ParticleSystemRenderer:
