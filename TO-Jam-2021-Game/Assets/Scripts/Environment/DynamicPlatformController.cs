@@ -13,6 +13,7 @@ public class DynamicPlatformController : MonoBehaviour
     public bool _affectedByGravity = true;
     public bool _affectedBySlow = false;
     public bool _horizontalVator = false;
+    public bool _automaticVator = false;
 
     [Header("States")]
 
@@ -22,6 +23,7 @@ public class DynamicPlatformController : MonoBehaviour
     public bool _slowed = false;
     public bool _floating = false;
     public bool _gravityLocked = false;
+    public bool _atRest = false;
 
     //its falling if everything is false but affected by grav true
     [Header("Timers")]
@@ -34,7 +36,7 @@ public class DynamicPlatformController : MonoBehaviour
     public Rigidbody2D _rigidbody;
 
     [Header("Movement Variables")]
-    public Vector3 _delta = new Vector3();
+    public Vector3 _delta = new Vector3(0,0,0);
     float pfDeltaY;
     public float _translateSpeed = 1.0f;
     public float _slowMultiplier = 1.0f;
@@ -72,13 +74,38 @@ public class DynamicPlatformController : MonoBehaviour
             transform.position = _transformTarget1.transform.position;
         }
 
+        if (_binaryVatorPlatform && _horizontalVator)
+        {
+            _rigidbody.gravityScale = 0;
+            _rigidbody.velocity = new Vector3(0, 0, 0);
+        }
+
+        // if this is an automatic vator set it to begin moving immediately
+        if(_automaticVator)
+        {
+            DistSwapTransformTarget();
+
+            if(_horizontalVator)
+            {
+                _translatingX = true;
+            } else 
+            {
+                _translatingY = true;
+            }
+        }
+
+        if(!_affectedByGravity)
+        {
+            _atRest = true;
+        }
+
         m_audio = GetComponent<PlatformAudio>();
     }
 
     #endregion
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         UpdateTimers();
 
@@ -126,7 +153,7 @@ public class DynamicPlatformController : MonoBehaviour
     void UpdateMotion()
     {
         // reset delta
-        _delta = new Vector3();
+        _delta = new Vector3(0,0,0);
 
         _delta.y = _translatingY ? _target.y - gameObject.transform.position.y : 0;
         _delta.x = _translatingX ? _target.x - gameObject.transform.position.x : 0;
@@ -139,7 +166,7 @@ public class DynamicPlatformController : MonoBehaviour
         _delta = _delta * _translateSpeed * Time.deltaTime * _slowMultiplier;
 
         // check if gravity is being applied, if so, retain the current y velocity assuming its gravity from the previous frame
-        if (!_floating && _affectedByGravity && (!_translatingY && !_horizontalVator) && !_gravityLocked)
+        if (!_floating && _affectedByGravity && (!_translatingY && !_horizontalVator) && !_gravityLocked && !_atRest)
         {
             if(GravitationalOvershoot() && _binaryVatorPlatform)
             {
@@ -154,10 +181,8 @@ public class DynamicPlatformController : MonoBehaviour
         } else
         {
             _rigidbody.gravityScale = 0;
+            _rigidbody.velocity = new Vector3(0, 0, 0);
         }
-
-        Debug.Log(Mathf.Abs(_delta.x));
-        Debug.Log(Mathf.Abs(_target.x - gameObject.transform.position.x));
 
         // check if there is x overshoot, if so set the x value equal to the target
         if((Mathf.Abs(_delta.x) >= Mathf.Abs(_target.x - gameObject.transform.position.x)) && _translatingX)
@@ -166,23 +191,39 @@ public class DynamicPlatformController : MonoBehaviour
 
             _delta.x = 0;
 
-            _translatingX = false;
-            Debug.Log("hello");
+            if (!_automaticVator)
+            {
+                _translatingX = false;
+                _target.x = 0;
+            } else
+            {
+                DistSwapTransformTarget();
+            }
         }
 
         // check if there is y overshoot, set the y value equal to the target
         if ((Mathf.Abs(_delta.y) >= Mathf.Abs(_target.y - gameObject.transform.position.y)) && _translatingY)
         {
-            gameObject.transform.position = gameObject.transform.position  + new Vector3(0, _delta.y, 0);
+            gameObject.transform.position = gameObject.transform.position + new Vector3(0, _delta.y, 0);
 
-            _delta.y = 0; 
+            _delta.y = 0;
 
-            _translatingY = false;
+            if (!_automaticVator)
+            {
+                _translatingY = false;
 
-            _floating = true;
+                _target.y = 0;
+
+                _floating = true;
+
+                _gravityLocked = true;
+            } else
+            {
+                DistSwapTransformTarget();
+            }
         }
 
-        if(_floating)
+        if(_floating || _gravityLocked)
         {
             _rigidbody.velocity = new Vector3(); 
         }
@@ -214,7 +255,7 @@ public class DynamicPlatformController : MonoBehaviour
     // <type> can be loaded with either "Shove" or "Float"
     public void QueueMovement(Vector2 playerPosition, float emotionRadius, float duration, string type)
     {
-        if(_type == type || _type == "Universal")
+        if((_type == type || _type == "Universal") && !_automaticVator)
         {
             if (_binaryVatorPlatform)
             {
@@ -242,20 +283,8 @@ public class DynamicPlatformController : MonoBehaviour
         {
             _translatingY = true;
         }
-        if (_translatingX || _translatingY)
-        {
-          
-        }
 
-        if(_target == _transformTarget2.transform.position)
-        {
-            _target = _transformTarget1.transform.position;
-        } else
-        {
-            _target = _transformTarget2.transform.position;
-            _floatTimer = 0.0f;
-            _maxFloatTime = duration;
-        }
+        DistSwapTransformTarget(duration);
     }
 
     // transforms a platform based off of the type of passed transform
@@ -295,28 +324,62 @@ public class DynamicPlatformController : MonoBehaviour
         }
     }
 
+    // swaps the transform target based off of distance
+    public void DistSwapTransformTarget()
+    {
+        float tempDistToTT1 = Vector3.Distance(transform.position, _transformTarget1.transform.position);
+        float tempDistToTT2 = Vector3.Distance(transform.position, _transformTarget2.transform.position);
+
+        if (tempDistToTT1 > tempDistToTT2)
+        {
+            _target = _transformTarget1.transform.position;
+        }
+        else
+        {
+            _target = _transformTarget2.transform.position;
+        }
+    }
+
+    // swaps the transform target based off of distance
+    public void DistSwapTransformTarget(float duration)
+    {
+        float tempDistToTT1 = Vector3.Distance(transform.position, _transformTarget1.transform.position);
+        float tempDistToTT2 = Vector3.Distance(transform.position, _transformTarget2.transform.position);
+
+        if (tempDistToTT1 > tempDistToTT2)
+        {
+            _target = _transformTarget1.transform.position;
+        }
+        else
+        {
+            _target = _transformTarget2.transform.position;
+
+            if (!_horizontalVator)
+            {
+                _floatTimer = 0.0f;
+                _maxFloatTime = duration;
+            }
+        }
+    }
     #endregion
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    // changes the state of booleans
+    public void ToggleAtRest()
     {
-       
+        _atRest = !_atRest;
     }
+
     // ensure that when this collides with another object it stops its translation immediately
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision collision)
     {
-
-        // m_audio.PlayRock(0, 3);  - Ground -platform
-
-
-        if (collision.gameObject.layer == gameObject.layer)
+        if (collision.gameObject.layer == gameObject.layer && collision.gameObject.tag != "Player")
         {
-
-
-  // !!!!          _translating = false;
-
-
-
+            _translatingX = false;
+            _target.x = 0;
+            _translatingY = false;
+            _target.y = 0;
+            Debug.Log("                                         ToggledOff");
+            m_audio.PlayRock(0, 3);
         }
     }
 }
