@@ -78,7 +78,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637567528019153040
+  lastModified: 637567582783784063
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -124,7 +124,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -573025276017320382}
+  - {fileID: 5716744106942666594}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637567528019143027
+  lastModified: 637567582783784063
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -743,7 +743,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 637567528019263053
+  lastModified: 637567582783893771
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -783,7 +783,7 @@ MonoBehaviour:
   - {fileID: -3643919091837229517}
   StringsBanks:
   - {fileID: -8631647653930531473}
-  stringsBankWriteTime: 637567528019153040
+  stringsBankWriteTime: 637567582783784063
   cacheVersion: 6
 --- !u!114 &1009423703038195222
 MonoBehaviour:
@@ -820,7 +820,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Character
-  lastModified: 637567528019123025
+  lastModified: 637567582783764122
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -884,6 +884,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2897829690729707694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2983869860326577185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,7 +1045,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 8183995222159028011}
+  - {fileID: 2897829690729707694}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1169,6 +1189,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &5716744106942666594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5892441475832474214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,6 +1250,26 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &6558261172455359735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &6654927187139864431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1284,7 +1344,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637567528019143027
+  lastModified: 637567582783784063
   LoadResult: 0
   FileSizes: []
   Exists: 1
