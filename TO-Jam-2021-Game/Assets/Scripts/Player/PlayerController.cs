@@ -609,17 +609,35 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null && hit.collider.tag == "Moving")
         {
-            MovingPlatform script = hit.collider.GetComponent<MovingPlatform>();    
+            MovingPlatform script = hit.collider.GetComponent<MovingPlatform>();
+            DynamicPlatformController script1 = hit.collider.GetComponent<DynamicPlatformController>();
 
-            if(IsGrounded())
+            if(script != null)
             {
-                // if the player is current standing on the platform then move them including y
-                transform.position = transform.position + new Vector3(script._delta.x, script._delta.y, 0);
+                if (IsGrounded())
+                {
+                    // if the player is current standing on the platform then move them including y
+                    transform.position = transform.position + new Vector3(script._delta.x, script._delta.y, 0);
+                }
+                else
+                {
+                    // otherwise do not move the player on the y axis only the x
+                    transform.position = transform.position + new Vector3(script._delta.x, 0, 0);
+                }
             } else
             {
-                // otherwise do not move the player on the y axis only the x
-                transform.position = transform.position + new Vector3(script._delta.x, 0, 0);
+                if (IsGrounded())
+                {
+                    // if the player is current standing on the platform then move them including y
+                    transform.position = transform.position + new Vector3(script1._delta.x, script1._delta.y, 0);
+                }
+                else
+                {
+                    // otherwise do not move the player on the y axis only the x
+                    transform.position = transform.position + new Vector3(script1._delta.x, 0, 0);
+                }
             }
+
         }
     }
 

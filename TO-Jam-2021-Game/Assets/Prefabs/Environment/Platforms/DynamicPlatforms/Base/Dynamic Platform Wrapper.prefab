@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 9148409643358328601}
   - component: {fileID: 9148409643358328602}
   - component: {fileID: 6056845857279281815}
+  - component: {fileID: 728005319696855189}
   m_Layer: 13
   m_Name: DynamicPlatform
   m_TagString: Moving
@@ -101,11 +102,13 @@ MonoBehaviour:
   _affectedByGravity: 1
   _affectedBySlow: 1
   _horizontalVator: 0
+  _automaticVator: 0
   _translatingX: 0
   _translatingY: 0
   _slowed: 0
   _floating: 0
   _gravityLocked: 0
+  _atRest: 0
   _slowTimer: 0
   _maxTimeSlowed: 0
   _floatTimer: 0
@@ -176,6 +179,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0995301af6a03d4f9c6ce2b29203556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &728005319696855189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9148409643358328603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c027d120a00264d94de21e4b060136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeBindingColliderDistancePercentage: 0.1
+  edgeBindingBoundMultiplier: 3
+  collisionThreshold: 0.05
+  effectiveZero: 0.001
+  dynamicScript: {fileID: 0}
 --- !u!1 &9148409643694296628
 GameObject:
   m_ObjectHideFlags: 0
