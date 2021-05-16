@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1462318018931703561, guid: b996a03dcac339b448fe6d1c9c067cef,
     type: 3}
   m_Color: {r: 0.16470587, g: 0.6016177, b: 0.8509804, a: 1}
@@ -163,7 +163,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0.025913931, y: 2.7138612, z: 0}
@@ -240,6 +240,7 @@ MonoBehaviour:
   maxMoveSpeed: 4
   xOffset: 1
   burstNow: 0
+  floatingAway: 0
 --- !u!95 &8585709792049408546
 Animator:
   serializedVersion: 3

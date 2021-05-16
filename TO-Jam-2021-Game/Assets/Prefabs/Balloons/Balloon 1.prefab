@@ -163,7 +163,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0.025913931, y: 2.7138612, z: 0}
@@ -240,6 +240,7 @@ MonoBehaviour:
   maxMoveSpeed: 4
   xOffset: 1
   burstNow: 0
+  floatingAway: 0
 --- !u!95 &7846055704282235550
 Animator:
   serializedVersion: 3
