@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{772aa5f8-8054-41d3-8348-a077f5f6e060}">
+		<property name="assetPath">
+			<value>zapsplat_foley_rock_small_fall_roll_down_large_pile_of_others_001_18402.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.8079999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3c194644-5d17-4322-b7da-3ce889869b74}</destination>
+		</relationship>
+	</object>
+</objects>
