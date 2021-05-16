@@ -2,72 +2,69 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TutorialPopups : MonoBehaviour
 {
-    //[SerializeField]
-    //private GameObject player;
+    [SerializeField]
+    private GameObject player;
 
     [SerializeField]
-    private Vector3 offset;
+    private GameKeyCode keyCodeToDismiss;
 
-    [SerializeField]
-    private string keyCodeToDismiss;
+    private bool triggered;
 
-    //private SpriteRenderer inputPrompt;
+    private GameKeyCode[] codes;
 
-    //private bool triggered = false;
+    private SpriteRenderer inputGraphic;
 
-    private int[] values;
-    private bool[] keys;
-
-    public enum GameKeyCode
-    {
-        SPACE,W,A,D,J,K,L
-    }
+    private enum GameKeyCode { w, a, d, j, k, l } //Warning: do not rename these
 
     private void Start()
     {
-        //inputPrompt = GetComponentInChildren<SpriteRenderer>();
-        //inputPrompt.enabled = false;
+        inputGraphic = GetComponentInChildren<SpriteRenderer>();
+        inputGraphic.enabled = false;
 
-        values = (int[])System.Enum.GetValues(typeof(GameKeyCode));
-        keys = new bool[values.Length];
-        // DUBUG LINE //foreach (int v in values) {Debug.Log($"enum value: {values.GetValue(v)}, enum index integer: {v}");}
+        // Initialize array of custom enums
+        codes = (GameKeyCode[])System.Enum.GetValues(typeof(GameKeyCode));
     }
 
-    //private void Update()
-    //{
-    //    if (triggered)
-    //    {
-    //        for(int i = 0; i < values.Length; i++)
-    //        {
-    //            keys[i] = Input.GetKey((KeyCode)values[i]);
-    //            if (keys[i])
-    //            {
+    private void Update()
+    {
+        // The BoxCollider2D for this system is located on the child "Trigger" of the main parent object "Teach Volume"
+        triggered = GetComponentInChildren<TutorialTriggerCheck>().triggered;
 
-    //            }
-    //        }
+        UpdateGraphicVisibility();
+        CheckForCorrectInput();
+    }
 
-    //        // Disable the trigger zone that holds this script
-    //        gameObject.SetActive(false);
-    //    }
+    private void UpdateGraphicVisibility()
+    {
+        // Flip the contextual input button prompts on or off depending on trigger
+        if (triggered)
+        { inputGraphic.enabled = true; } 
+        else { inputGraphic.enabled = false; }
+    }
 
-    //}
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Player"))
-    //    {
-    //        triggered = true;
-    //        inputPrompt.enabled = true;
-    //    }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Player"))
-    //    {
-    //        inputPrompt.enabled = false;
-    //    }
-    //}
+    private void CheckForCorrectInput()
+    {
+        if (triggered)
+        {
+            // Iterate through enum array
+            foreach (GameKeyCode code in codes)
+            {
+                // Convert enum to string
+                string c = code.ToString();
+                // If if Input matches the enum of the current iteration
+                if (Input.GetKeyDown(c))
+                {
+                    // Check if key being pressed down matches the key that will dismiss the contextual input button prompts
+                    if (c == keyCodeToDismiss.ToString())
+                    {
+                        // Disable the trigger zone that holds this script, graphic will disappear
+                        gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
+    }
 }
