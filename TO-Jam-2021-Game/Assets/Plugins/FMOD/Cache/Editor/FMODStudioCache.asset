@@ -67,6 +67,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-8829788759707816208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-8612695399281271161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,8 +174,56 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+<<<<<<< HEAD
   Exists: 1
 --- !u!114 &-7678669619996971720
+=======
+  Exists: 0
+--- !u!114 &-7639535288211531822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/UI.bank
+  Name: UI
+  StudioPath: bank:/UI
+  lastModified: 637567707750356678
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-7386846511520725943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RockMovement
+  m_EditorClassIdentifier: 
+  Path: event:/RockMovement
+  guid: a786c613b1553743abee9212dbc94739
+  Banks:
+  - {fileID: -879996803603066704}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1369131632411202016}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5452
+--- !u!114 &-7375240271718321636
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,15 +235,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Collectable/CollectCombo
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Name: CollectCombo
   Min: 0
   Max: 10
+=======
+  Path: FMOD/Balloon/Build/Desktop/Environment.bank
+  Name: Environment
+  StudioPath: bank:/Environment
+  lastModified: 637567738255247306
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-7356334270032866670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BalloonInflate
+  m_EditorClassIdentifier: 
+  Path: event:/BalloonInflate
+  guid: 67f4999ba702f64d8e3483c72b2a0a28
+  Banks:
+  - {fileID: 5345682091604911536}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2650
+--- !u!114 &-7290966290147363587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+>>>>>>> origin/LevelDesignSam
   Default: 0
   ID:
     data1: 0
     data2: 0
+<<<<<<< HEAD
   Exists: 0
 --- !u!114 &-7628657647004096473
+=======
+  Exists: 1
+--- !u!114 &-7282776837825359795
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,8 +376,37 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 214151
 --- !u!114 &-7282776837825359795
+=======
+  Length: 3360
+--- !u!114 &-5863400055459627775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Emotion
+  m_EditorClassIdentifier: 
+  Path: event:/Emotion
+  guid: c6aab5dc4851e6429a275359e6fcc9b0
+  Banks:
+  - {fileID: 5345682091604911536}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8289008712754712197}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 124056
+--- !u!114 &-5818442913653532264
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,7 +426,34 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-7268256826016351310
+=======
+--- !u!114 &-5682214742498296447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RockLand
+  m_EditorClassIdentifier: 
+  Path: event:/RockLand
+  guid: 7c4758f140fb7948955a457f8fe174dc
+  Banks:
+  - {fileID: -879996803603066704}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2808
+--- !u!114 &-5652848156674729008
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,7 +492,34 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-7023509920671911643
+=======
+--- !u!114 &-4203503883597972134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Checkpoint
+  m_EditorClassIdentifier: 
+  Path: event:/Checkpoint
+  guid: 0a3820133690aa41877b22ee2984b38c
+  Banks:
+  - {fileID: -879996803603066704}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4187276606065452853
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335,7 +539,53 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+<<<<<<< HEAD
 --- !u!114 &-6996593919378881122
+=======
+--- !u!114 &-3404223919969648450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CharacterLand
+  m_EditorClassIdentifier: 
+  Path: event:/CharacterLand
+  guid: bc224bad3de4744d82c9357b917b9b6d
+  Banks:
+  - {fileID: 5345682091604911536}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3360
+--- !u!114 &-3271936553097677842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637567738255257311
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2558570211289601253
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,15 +665,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/EmotionPickUp/Emotion
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Name: Emotion
   Min: 0
   Max: 4
+=======
+  Path: event:/BGM
+  guid: 58279b124ea5014d95f88b2a2282079b
+  Banks:
+  - {fileID: 6473596788715246593}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1214039994833139114}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 194220
+--- !u!114 &-1548962416051220018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VolumeSFX
+  m_EditorClassIdentifier: 
+  Name: VolumeSFX
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1840146871
+    data2: 830205969
+  Exists: 1
+--- !u!114 &-1369131632411202016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+>>>>>>> origin/LevelDesignSam
   Default: 0
   ID:
     data1: 0
     data2: 0
+<<<<<<< HEAD
   Exists: 0
 --- !u!114 &-6123018190791703595
+=======
+  Exists: 1
+--- !u!114 &-1368853588774609089
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -507,7 +812,11 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-5652848156674729008
+=======
+--- !u!114 &-879996803603066704
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -526,6 +835,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-5146499548956095356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,6 +994,9 @@ MonoBehaviour:
   FileSizes: []
   Exists: 1
 --- !u!114 &-2262947686865269125
+=======
+--- !u!114 &-520770495854591123
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -705,6 +1018,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 696
 --- !u!114 &-2199327654510661446
 MonoBehaviour:
@@ -876,6 +1190,10 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &-1158144358057093958
+=======
+  Length: 0
+--- !u!114 &-341233806928978945
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -885,18 +1203,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/RockLand
   m_EditorClassIdentifier: 
   Path: event:/RockLand
   guid: 7c4758f140fb7948955a457f8fe174dc
   Banks:
   - {fileID: -2448222962176725037}
+=======
+  m_Name: event:/BalloonPop
+  m_EditorClassIdentifier: 
+  Path: event:/BalloonPop
+  guid: 826d9381d46fba43b852bb6c90e68f50
+  Banks:
+  - {fileID: 5345682091604911536}
+>>>>>>> origin/LevelDesignSam
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 2808
 --- !u!114 &-1013879841442781108
 MonoBehaviour:
@@ -1517,6 +1845,10 @@ MonoBehaviour:
     data2: 0
   Exists: 0
 --- !u!114 &3649859566410465384
+=======
+  Length: 696
+--- !u!114 &11400000
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1528,6 +1860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/VolumeBGM
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Name: VolumeBGM
   Min: 0
   Max: 2
@@ -1537,6 +1870,36 @@ MonoBehaviour:
     data2: 3941617650
   Exists: 1
 --- !u!114 &3994346313845842760
+=======
+  EditorBanks:
+  - {fileID: 3379931454157485692}
+  - {fileID: 5345682091604911536}
+  - {fileID: -879996803603066704}
+  - {fileID: 1372200328782795529}
+  - {fileID: -7639535288211531822}
+  EditorEvents:
+  - {fileID: 5047695402889729390}
+  - {fileID: 5038892282278894316}
+  - {fileID: -7356334270032866670}
+  - {fileID: -341233806928978945}
+  - {fileID: -3404223919969648450}
+  - {fileID: -5863400055459627775}
+  - {fileID: -4203503883597972134}
+  - {fileID: -5682214742498296447}
+  - {fileID: 6500731811386225998}
+  - {fileID: -7386846511520725943}
+  - {fileID: 809773264732109923}
+  EditorParameters:
+  - {fileID: -1548962416051220018}
+  - {fileID: 1364424432704191601}
+  MasterBanks:
+  - {fileID: 1372200328782795529}
+  StringsBanks:
+  - {fileID: 3379931454157485692}
+  stringsBankWriteTime: 637567632439628861
+  cacheVersion: 6
+--- !u!114 &105929588903105452
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1581,8 +1944,37 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 0
 --- !u!114 &4345339965870759323
+=======
+  Length: 194220
+--- !u!114 &809773264732109923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/BGM
+  guid: 58279b124ea5014d95f88b2a2282079b
+  Banks:
+  - {fileID: -7639535288211531822}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7290966290147363587}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 194220
+--- !u!114 &967499468354076307
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1645,7 +2037,31 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &5604606440307394119
+=======
+--- !u!114 &1364424432704191601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VolumeBGM
+  m_EditorClassIdentifier: 
+  Name: VolumeBGM
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3456210756
+    data2: 3941617650
+  Exists: 1
+--- !u!114 &1371685179761405741
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1664,11 +2080,60 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
+<<<<<<< HEAD
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 192
 --- !u!114 &5742624028863867749
+=======
+  Parameters:
+  - {fileID: -8121944245314587748}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1372200328782795529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637567707750137282
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1742348126567970409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637567621920427047
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1576
+  Exists: 1
+--- !u!114 &2231591795793264328
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1779,6 +2244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Collectable/CollectCombo
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Name: CollectCombo
   Min: 0
   Max: 10
@@ -1788,6 +2254,42 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &6648724203275034224
+=======
+  Path: event:/Emotion
+  guid: c6aab5dc4851e6429a275359e6fcc9b0
+  Banks:
+  - {fileID: 9181795339698195478}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7282776837825359795}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 124056
+--- !u!114 &3379931454157485692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637567632439628861
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1576
+  Exists: 1
+--- !u!114 &3649859566410465384
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1804,10 +2306,37 @@ MonoBehaviour:
   Max: 10
   Default: 0
   ID:
+<<<<<<< HEAD
     data1: 0
     data2: 0
   Exists: 0
 --- !u!114 &7077914798024171019
+=======
+    data1: 3456210756
+    data2: 3941617650
+  Exists: 1
+--- !u!114 &3715522129995788817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EmotionPickUp/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3994346313845842760
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1829,8 +2358,61 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 3056
 --- !u!114 &7165873467397530176
+=======
+  Length: 2808
+--- !u!114 &5038892282278894316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footstep
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep
+  guid: 53cf83d7db11f842a8a0c6c5b10bc09c
+  Banks:
+  - {fileID: 5345682091604911536}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 192
+--- !u!114 &5047695402889729390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Collectable
+  m_EditorClassIdentifier: 
+  Path: event:/Collectable
+  guid: 1ca470e6d234fa4988f23c834a1c164b
+  Banks:
+  - {fileID: 5345682091604911536}
+  - {fileID: -879996803603066704}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8829788759707816208}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5049075738987801789
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1873,7 +2455,11 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &7762156985304656345
+=======
+--- !u!114 &5345682091604911536
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1882,6 +2468,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/VolumeSFX
   m_EditorClassIdentifier: 
@@ -1894,6 +2481,19 @@ MonoBehaviour:
     data2: 830205969
   Exists: 1
 --- !u!114 &7844050904679305876
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Character.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Character.bank
+  Name: Character
+  StudioPath: bank:/Character
+  lastModified: 637567707750087419
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5604606440307394119
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1999,8 +2599,60 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+<<<<<<< HEAD
   Exists: 0
 --- !u!114 &8650713145741020280
+=======
+  Exists: 1
+--- !u!114 &6500731811386225998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EmotionPickUp
+  m_EditorClassIdentifier: 
+  Path: event:/EmotionPickUp
+  guid: a3fbe5a1ca1e904593baeeb3b8efd0e7
+  Banks:
+  - {fileID: -879996803603066704}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3715522129995788817}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7165873467397530176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BalloonPop
+  m_EditorClassIdentifier: 
+  Path: event:/BalloonPop
+  guid: 826d9381d46fba43b852bb6c90e68f50
+  Banks:
+  - {fileID: -2558570211289601253}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 696
+--- !u!114 &7583997152752173500
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2045,7 +2697,31 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+<<<<<<< HEAD
 --- !u!114 &8816279118294281702
+=======
+--- !u!114 &8289008712754712197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emotion/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &8670629052409445252
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2149,7 +2825,11 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2650
+<<<<<<< HEAD
 --- !u!114 &8990218250824952219
+=======
+--- !u!114 &9122586701677783395
+>>>>>>> origin/LevelDesignSam
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2159,16 +2839,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+<<<<<<< HEAD
   m_Name: parameter:/BGM/Emotion
   m_EditorClassIdentifier: 
   Name: Emotion
   Min: 0
   Max: 4
+=======
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+>>>>>>> origin/LevelDesignSam
   Default: 0
   ID:
     data1: 0
     data2: 0
   Exists: 0
+<<<<<<< HEAD
 --- !u!114 &9054537930045958825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2216,6 +2905,8 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 124056
+=======
+>>>>>>> origin/LevelDesignSam
 --- !u!114 &9181795339698195478
 MonoBehaviour:
   m_ObjectHideFlags: 0
