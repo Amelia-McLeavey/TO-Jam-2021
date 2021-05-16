@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
     public bool grounded = false;
     public bool jumping = false;
     public bool falling = false;
+    public bool inputActive = true;
 
     [Header("Grounding")]
     // track the layer that platforms are located on
@@ -110,8 +111,24 @@ public class PlayerController : MonoBehaviour
         // check that our jump data has not changed
         CheckJumpData();
 
-        // store directional input for this frames calculations
-        UpdateInput();
+        if(inputActive)
+        {
+            // store directional input for this frames calculations
+            UpdateInput();
+        } else
+        {
+            input.x = 0;
+            input.y = 0;
+
+            spacePressed = false;
+
+            if (spaceCurrentlyPressed == true)
+            {
+                spaceReleased = true;
+                spaceCurrentlyPressed = false;
+            }
+        }
+
 
         UpdateMovement();
 
