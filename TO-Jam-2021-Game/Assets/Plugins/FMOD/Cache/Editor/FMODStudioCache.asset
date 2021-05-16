@@ -20,6 +20,53 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-8661135468252512408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Emotion
+  m_EditorClassIdentifier: 
+  Path: event:/Emotion
+  guid: c6aab5dc4851e6429a275359e6fcc9b0
+  Banks:
+  - {fileID: 2968955502858394564}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4396581305303050033}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 124056
+--- !u!114 &-8551306546381704599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CharacterLand
+  m_EditorClassIdentifier: 
+  Path: event:/CharacterLand
+  guid: bc224bad3de4744d82c9357b917b9b6d
+  Banks:
+  - {fileID: 2968955502858394564}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3360
 --- !u!114 &-8276689330335645203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +129,46 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-7790228752106308312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-7599701219923485254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VolumeSFX
+  m_EditorClassIdentifier: 
+  Name: VolumeSFX
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1840146871
+    data2: 830205969
+  Exists: 1
 --- !u!114 &-7222628031203561487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +209,31 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-6966634612316007731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Collectable
+  m_EditorClassIdentifier: 
+  Path: event:/Collectable
+  guid: 1ca470e6d234fa4988f23c834a1c164b
+  Banks:
+  - {fileID: 2968955502858394564}
+  - {fileID: 4779645857114981383}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7790228752106308312}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-6438435473621822433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +277,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6107157099265287036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BalloonInflate
+  m_EditorClassIdentifier: 
+  Path: event:/BalloonInflate
+  guid: 67f4999ba702f64d8e3483c72b2a0a28
+  Banks:
+  - {fileID: 2968955502858394564}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2650
 --- !u!114 &-5880050811911544254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +343,49 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-5167108314936446466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4769748062829513265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Checkpoint
+  m_EditorClassIdentifier: 
+  Path: event:/Checkpoint
+  guid: 0a3820133690aa41877b22ee2984b38c
+  Banks:
+  - {fileID: 4779645857114981383}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4598298142496077447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +404,26 @@ MonoBehaviour:
   lastModified: 637567651725351322
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-4396581305303050033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emotion/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-3560549738507483751
 MonoBehaviour:
@@ -292,6 +490,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1576
   Exists: 1
+--- !u!114 &-2781267120815111950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637567653900991304
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2492181822146855489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +527,26 @@ MonoBehaviour:
   lastModified: 637567651724892550
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-2081637221766054605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EmotionPickUp/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-2067847144291835401
 MonoBehaviour:
@@ -407,32 +644,52 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -3229308474447705024}
-  - {fileID: -8095328510742792253}
-  - {fileID: -8276689330335645203}
-  - {fileID: -2492181822146855489}
-  - {fileID: -4598298142496077447}
+  - {fileID: 3495284275303296221}
+  - {fileID: 2968955502858394564}
+  - {fileID: 4779645857114981383}
+  - {fileID: -2781267120815111950}
+  - {fileID: 1248142206991577380}
   EditorEvents:
-  - {fileID: 7896375608981622995}
-  - {fileID: -5880050811911544254}
-  - {fileID: 6776566006424839619}
-  - {fileID: 7408528088223664642}
-  - {fileID: -2067847144291835401}
-  - {fileID: 3979069872084256243}
-  - {fileID: -6176217606848139034}
-  - {fileID: 135632311108495844}
-  - {fileID: -3383427201205257619}
-  - {fileID: -8236124332364381345}
-  - {fileID: 236729587925227269}
+  - {fileID: -6966634612316007731}
+  - {fileID: 8871486606915186194}
+  - {fileID: -6107157099265287036}
+  - {fileID: 7795721372528685087}
+  - {fileID: -8551306546381704599}
+  - {fileID: -8661135468252512408}
+  - {fileID: -4769748062829513265}
+  - {fileID: 4954399137198707758}
+  - {fileID: 2257449225414937437}
+  - {fileID: 7848630560074522482}
+  - {fileID: 1787595351548119011}
   EditorParameters:
-  - {fileID: -1579142697350636062}
-  - {fileID: 1245859193244310831}
+  - {fileID: -7599701219923485254}
+  - {fileID: 76352751518053221}
   MasterBanks:
-  - {fileID: -2492181822146855489}
+  - {fileID: -2781267120815111950}
   StringsBanks:
-  - {fileID: -3229308474447705024}
-  stringsBankWriteTime: 637567651724902518
+  - {fileID: 3495284275303296221}
+  stringsBankWriteTime: 637567653152895223
   cacheVersion: 6
+--- !u!114 &76352751518053221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VolumeBGM
+  m_EditorClassIdentifier: 
+  Name: VolumeBGM
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3456210756
+    data2: 3941617650
+  Exists: 1
 --- !u!114 &135632311108495844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +777,113 @@ MonoBehaviour:
     data1: 3456210756
     data2: 3941617650
   Exists: 1
+--- !u!114 &1248142206991577380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/UI.bank
+  Name: UI
+  StudioPath: bank:/UI
+  lastModified: 637567653901190762
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1787595351548119011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/BGM
+  guid: 58279b124ea5014d95f88b2a2282079b
+  Banks:
+  - {fileID: 1248142206991577380}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4892862398462489349}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 194220
+--- !u!114 &2257449225414937437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EmotionPickUp
+  m_EditorClassIdentifier: 
+  Path: event:/EmotionPickUp
+  guid: a3fbe5a1ca1e904593baeeb3b8efd0e7
+  Banks:
+  - {fileID: 4779645857114981383}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2081637221766054605}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2968955502858394564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Character.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Character.bank
+  Name: Character
+  StudioPath: bank:/Character
+  lastModified: 637567653900951412
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3495284275303296221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637567653152895223
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1576
+  Exists: 1
 --- !u!114 &3979069872084256243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +908,88 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 124056
+--- !u!114 &4779645857114981383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Balloon/Build/Desktop/Environment.bank
+  Name: Environment
+  StudioPath: bank:/Environment
+  lastModified: 637567653900991304
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4892862398462489349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &4954399137198707758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RockLand
+  m_EditorClassIdentifier: 
+  Path: event:/RockLand
+  guid: 7c4758f140fb7948955a457f8fe174dc
+  Banks:
+  - {fileID: 4779645857114981383}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2808
+--- !u!114 &6312861783319742336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &6776566006424839619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +1036,53 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 696
+--- !u!114 &7795721372528685087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BalloonPop
+  m_EditorClassIdentifier: 
+  Path: event:/BalloonPop
+  guid: 826d9381d46fba43b852bb6c90e68f50
+  Banks:
+  - {fileID: 2968955502858394564}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 696
+--- !u!114 &7848630560074522482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RockMovement
+  m_EditorClassIdentifier: 
+  Path: event:/RockMovement
+  guid: a786c613b1553743abee9212dbc94739
+  Banks:
+  - {fileID: 4779645857114981383}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5167108314936446466}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5452
 --- !u!114 &7896375608981622995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,3 +1108,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &8871486606915186194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footstep
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep
+  guid: 53cf83d7db11f842a8a0c6c5b10bc09c
+  Banks:
+  - {fileID: 2968955502858394564}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 192
