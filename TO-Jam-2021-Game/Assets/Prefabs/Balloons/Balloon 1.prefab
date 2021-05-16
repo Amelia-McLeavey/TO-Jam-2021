@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 7846055704282235547}
   - component: {fileID: 7846055704282235544}
   - component: {fileID: 7846055704282235550}
+  - component: {fileID: 7556627982554838694}
   m_Layer: 24
   m_Name: Balloon 1
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,3 +259,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7556627982554838694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846055704282235545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b302c571d318964cb040d7e41321262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
