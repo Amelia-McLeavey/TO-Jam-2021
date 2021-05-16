@@ -115,12 +115,12 @@ public class BalloonAOE : MonoBehaviour
                     // JOY | FLOAT
                     case "J":
                         //Debug.Log("J Reached");
-                        platform.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, joyEffectDuration, keyPressed);
+                        platform.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, joyEffectDuration, "Float");
                         break;
                     // ANGER | SHOVE
                     case "K":
                         //Debug.Log("K Reached");
-                        platform.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, angerEffectDuration, keyPressed);
+                        platform.GetComponent<DynamicPlatformController>().QueueMovement(gameObject.transform.position, AOERadius, angerEffectDuration, "Shove");
                         break;
                     // SAD | SLOW
                     case "L":

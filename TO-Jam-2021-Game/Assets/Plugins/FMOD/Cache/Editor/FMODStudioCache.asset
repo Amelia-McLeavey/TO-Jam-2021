@@ -78,7 +78,11 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 637567621920427047
+=======
+  lastModified: 637567634014043839
+>>>>>>> SoundNew2
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -122,12 +126,16 @@ MonoBehaviour:
   - {fileID: 7570527300286302751}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters:
+<<<<<<< HEAD
   - {fileID: -7647560609689674500}
+=======
+  - {fileID: 7111491856197182441}
+>>>>>>> SoundNew2
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 5452
 --- !u!114 &-8253692222616758061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +217,26 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &-7543207771477532984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-7106423249212195715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -523,6 +551,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3895294735135196605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3643919091837229517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,9 +586,33 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 637567528019143027
+=======
+  lastModified: 637567634014033899
+>>>>>>> SoundNew2
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-3621680693915788822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-3531897540027290268
 MonoBehaviour:
@@ -583,6 +655,26 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &-3080606562893089433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-2982270019761825383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -708,6 +800,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2650
+--- !u!114 &-1757444435453864692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-1395929410500918535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,7 +918,11 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
+<<<<<<< HEAD
   lastModified: 637567528019263053
+=======
+  lastModified: 637567634014372973
+>>>>>>> SoundNew2
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -839,7 +955,11 @@ MonoBehaviour:
   - {fileID: -6056701731340111827}
   - {fileID: -8469958126624004912}
   - {fileID: -8721336288996066451}
+<<<<<<< HEAD
   - {fileID: -1856170124512767767}
+=======
+  - {fileID: 3917858440598421700}
+>>>>>>> SoundNew2
   EditorParameters:
   - {fileID: -4611785166265936657}
   - {fileID: -4161437544891349888}
@@ -847,7 +967,11 @@ MonoBehaviour:
   - {fileID: -3643919091837229517}
   StringsBanks:
   - {fileID: -8631647653930531473}
+<<<<<<< HEAD
   stringsBankWriteTime: 637567621920427047
+=======
+  stringsBankWriteTime: 637567634014043839
+>>>>>>> SoundNew2
   cacheVersion: 6
 --- !u!114 &1009423703038195222
 MonoBehaviour:
@@ -884,7 +1008,11 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Character
+<<<<<<< HEAD
   lastModified: 637567528019123025
+=======
+  lastModified: 637567634013654869
+>>>>>>> SoundNew2
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -948,6 +1076,68 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2334037322736116474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+<<<<<<< HEAD
+=======
+  Exists: 1
+--- !u!114 &2371032309265667169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2627495000918514964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &2897829690729707694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,6 +1157,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+>>>>>>> SoundNew2
   Exists: 0
 --- !u!114 &2983869860326577185
 MonoBehaviour:
@@ -1088,6 +1279,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &3917858440598421700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EmotionPickUp
+  m_EditorClassIdentifier: 
+  Path: event:/EmotionPickUp
+  guid: a3fbe5a1ca1e904593baeeb3b8efd0e7
+  Banks:
+  - {fileID: 7570527300286302751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3950046380827018664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,7 +1323,11 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
+<<<<<<< HEAD
   - {fileID: -5707507593623666243}
+=======
+  - {fileID: -3895294735135196605}
+>>>>>>> SoundNew2
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1273,6 +1491,28 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &5715645081996944560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+<<<<<<< HEAD
+=======
+  Exists: 1
 --- !u!114 &5716744106942666594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,6 +1532,27 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &5840219428258010022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+>>>>>>> SoundNew2
   Exists: 0
 --- !u!114 &5892441475832474214
 MonoBehaviour:
@@ -1333,6 +1594,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &6156657858134530640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &6558261172455359735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,6 +1674,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &7111491856197182441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7133859885320797730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1428,7 +1729,11 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
+<<<<<<< HEAD
   lastModified: 637567621920417045
+=======
+  lastModified: 637567634014003938
+>>>>>>> SoundNew2
   LoadResult: 0
   FileSizes: []
   Exists: 1
