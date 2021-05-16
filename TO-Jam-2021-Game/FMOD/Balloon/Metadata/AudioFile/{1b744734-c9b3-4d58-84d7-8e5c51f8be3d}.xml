@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{1b744734-c9b3-4d58-84d7-8e5c51f8be3d}">
+		<property name="assetPath">
+			<value>zapsplat_magic_wand_ping_003_12531.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.0563265306122447</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3c194644-5d17-4322-b7da-3ce889869b74}</destination>
+		</relationship>
+	</object>
+</objects>
