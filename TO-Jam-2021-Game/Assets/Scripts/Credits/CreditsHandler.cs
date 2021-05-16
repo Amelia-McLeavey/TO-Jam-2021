@@ -35,18 +35,25 @@ public class CreditsHandler : MonoBehaviour
 
     public void DeployCredits()
     {
-        tempCredit = Instantiate(creditsObject, this.transform);
+        if (creditsToReadout[currentCredit] != null)
+        {
+            tempCredit = Instantiate(creditsObject, this.transform);
 
-        tempCredit.GetComponent<Text>().text = (creditsToReadout[currentCredit]);
-        currentCredit += 1;
+            tempCredit.GetComponent<Text>().text = (creditsToReadout[currentCredit]);
+            currentCredit += 1;
+        }
     }
 
     public void DeployImage()
     {
-        tempImage = Instantiate(imageObject, this.transform);
+        if (imagesToShow[currentImage] != null)
+        {
+            tempImage = Instantiate(imageObject, this.transform);
 
-        tempImage.GetComponent<Image>().sprite = (imagesToShow[currentImage]);
-        currentImage += 1;
+            tempImage.GetComponent<Image>().sprite = (imagesToShow[currentImage]);
+            currentImage += 1;
+        }
+
     }
 
 
