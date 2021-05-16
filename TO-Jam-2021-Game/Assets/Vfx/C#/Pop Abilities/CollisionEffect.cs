@@ -36,6 +36,12 @@ public class CollisionEffect : MonoBehaviour
         startTime = Time.time;
         StartCoroutine(SetupEmotion());
 
+        CollisionEffect[] effects = transform.parent.GetComponentsInChildren<CollisionEffect>();
+        foreach (CollisionEffect effect in effects) {
+            if (effect != this) {
+                Destroy(effect.gameObject);
+            }
+        }
     }
 
     IEnumerator SetupEmotion() {
