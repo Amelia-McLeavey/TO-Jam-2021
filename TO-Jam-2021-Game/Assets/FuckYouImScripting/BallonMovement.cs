@@ -23,6 +23,8 @@ public class BallonMovement : MonoBehaviour
 
     public bool burstNow=false;
 
+    public bool floatingAway = false;
+
     void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -47,34 +49,42 @@ public class BallonMovement : MonoBehaviour
     {
         this.DrawRope();
 
-        if (burstNow)
+        if (!floatingAway)
         {
-            burstNow = false;
-            burstBalloon();
-        }
-
-        if (Vector2.Distance(this.transform.position, holder.position) > ropeLength)
-        {
-            //find pos on radius circle
-            //outOfRange();
-            dragBalloons(maxMoveSpeed*3f);
-
-            if(Vector2.Distance(this.transform.position, holder.position) > 3* ropeLength)
+            if (burstNow)
             {
-                this.transform.position = holder.position;
+                burstNow = false;
+                burstBalloon();
+            }
+
+            if (Vector2.Distance(this.transform.position, holder.position) > ropeLength)
+            {
+                //find pos on radius circle
+                //outOfRange();
+                dragBalloons(maxMoveSpeed * 3f);
+
+                if (Vector2.Distance(this.transform.position, holder.position) > 3 * ropeLength)
+                {
+                    this.transform.position = holder.position;
+                }
+            }
+            else
+            {
+                if (Mathf.Abs(holderRb.velocity.x) >= 0.5f)
+                {
+                    dragBalloons(maxMoveSpeed);
+                }
+                else if (!BalloonHasBurst)
+                {
+                    floatingBalloons();
+                }
             }
         }
         else
         {
-            if (Mathf.Abs(holderRb.velocity.x) >= 0.5f)
-            {
-                dragBalloons(maxMoveSpeed);
-            }
-            else if(!BalloonHasBurst)
-            {
-                floatingBalloons();
-            }
+            rb.gravityScale = -0.6f;
         }
+
 
     }
 
@@ -168,10 +178,14 @@ public class BallonMovement : MonoBehaviour
         RopeSegment firstSegment = this.ropeSegments[0];
         firstSegment.posNow = this.transform.position;
         this.ropeSegments[0] = firstSegment;
+        if (!floatingAway)
+        {
+            RopeSegment lastSegment = this.ropeSegments[this.segmentLength - 1];
+            lastSegment.posNow = holder.position;
 
-        RopeSegment lastSegment = this.ropeSegments[this.segmentLength - 1];
-        lastSegment.posNow = holder.position;
-        this.ropeSegments[this.segmentLength - 1] = lastSegment;
+            this.ropeSegments[this.segmentLength - 1] = lastSegment;
+        }
+
 
         for (int i = 0; i < this.segmentLength - 1; i++)
         {
