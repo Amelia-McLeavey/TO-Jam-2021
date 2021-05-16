@@ -366,7 +366,7 @@ RectTransform:
   - {fileID: 2100760800}
   - {fileID: 1978453843}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -901,7 +901,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609192014
 GameObject:
@@ -2101,7 +2101,7 @@ Transform:
   m_LocalScale: {x: 2.2832227, y: 0.19850498, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1832601648
 GameObject:
@@ -2629,7 +2629,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &2100760799
 GameObject:
@@ -2701,8 +2701,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e221c9546c0904083de994a9fdbf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastEmotionAsInt: 0
   AOERadius: 1
-  effectDuration: 1
+  timeToMaxRadius: 1.5
+  joyEffectDuration: 1
+  angerEffectDuration: 1
+  sadEffectDuration: 1
+  joyEffectCooldown: 1
+  angerEffectCooldown: 1
+  sadEffectCooldown: 1
   slowMultiplier: 2
 --- !u!114 &168562702209581640
 MonoBehaviour:
@@ -2810,87 +2817,77 @@ Transform:
   - {fileID: 1267714524}
   - {fileID: 1324558538}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5876754048135784315
+--- !u!1001 &6816966139537815182
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509957, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
+        type: 3}
+      propertyPath: m_Name
+      value: BalloonSpawnBoy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.98
+      value: 2.2
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.199
+      value: -2.8
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136899, guid: fedcb7a69589a3544b082e98e83bbfa3,
+    - target: {fileID: 6816966139702509982, guid: 9a61037cc9cd7dc48b50b642a7d824c2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136904, guid: fedcb7a69589a3544b082e98e83bbfa3,
-        type: 3}
-      propertyPath: m_Name
-      value: Balloon
-      objectReference: {fileID: 0}
-    - target: {fileID: 5876754048012136911, guid: fedcb7a69589a3544b082e98e83bbfa3,
-        type: 3}
-      propertyPath: holder
-      value: 
-      objectReference: {fileID: 1324558538}
-    - target: {fileID: 5876754048012136911, guid: fedcb7a69589a3544b082e98e83bbfa3,
-        type: 3}
-      propertyPath: holderRb
-      value: 
-      objectReference: {fileID: 168562702209581641}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fedcb7a69589a3544b082e98e83bbfa3, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9a61037cc9cd7dc48b50b642a7d824c2, type: 3}
 --- !u!1001 &7202359055971948187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2985,12 +2982,17 @@ PrefabInstance:
     - target: {fileID: 7846055704282235545, guid: 4835d7d0247ad1e4880380572d8abd1b,
         type: 3}
       propertyPath: m_Name
-      value: ' Balloon 1'
+      value: Balloon 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846055704282235545, guid: 4835d7d0247ad1e4880380572d8abd1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Balloon
       objectReference: {fileID: 0}
     - target: {fileID: 7846055704282235551, guid: 4835d7d0247ad1e4880380572d8abd1b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7846055704282235551, guid: 4835d7d0247ad1e4880380572d8abd1b,
         type: 3}
@@ -3054,7 +3056,7 @@ PrefabInstance:
     - target: {fileID: 8243430315049297833, guid: 04ced979f93396d4cb8450376ca1f8de,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8243430315049297833, guid: 04ced979f93396d4cb8450376ca1f8de,
         type: 3}
@@ -3150,10 +3152,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Balloon 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8585709792049408555, guid: d7a73815a27fa724884000a6a9464404,
+        type: 3}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
     - target: {fileID: 8585709792049408557, guid: d7a73815a27fa724884000a6a9464404,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8585709792049408557, guid: d7a73815a27fa724884000a6a9464404,
         type: 3}
