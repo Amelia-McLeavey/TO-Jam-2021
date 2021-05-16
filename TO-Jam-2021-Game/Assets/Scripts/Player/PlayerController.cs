@@ -546,6 +546,8 @@ public class PlayerController : MonoBehaviour
             {
                 velocity.y = 0;
                 jumping = false;
+
+                GetComponentInChildren<PlayerAudio>().PlayCharacterLand();
             }
 
             ResetCoyoteTime();

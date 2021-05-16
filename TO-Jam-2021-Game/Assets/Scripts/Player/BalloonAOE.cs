@@ -41,6 +41,8 @@ public class BalloonAOE : MonoBehaviour
 
     private enum LastEmotion { None, Anger, Sad, Joy }
 
+
+
     public void PopBalloon(string keyPressed)
     {
         if (inputIsCool)
@@ -79,7 +81,9 @@ public class BalloonAOE : MonoBehaviour
             }
 
             StartCoroutine(EffectDelay(keyPressed));
-        }      
+        }
+
+
     }
 
     private IEnumerator EffectDelay(string keyPressed)
@@ -137,6 +141,7 @@ public class BalloonAOE : MonoBehaviour
     {
         yield return new WaitForSeconds(effectCooldown);
         inputIsCool = true;
+
     }
 
     // A temporary Debug Draw method to show us where the area of effect is until we have a proper VFX, only visible in Scene view.
