@@ -11,25 +11,21 @@ public class TutorialPopups : MonoBehaviour
     [SerializeField]
     private GameKeyCode keyCodeToDismiss;
 
-    private SpriteRenderer inputGraphic;
-
     private bool triggered;
 
-    private int[] values;
-    private bool[] keys;
+    private GameKeyCode[] codes;
 
-    private enum GameKeyCode { Space, W, A, D, J, K, L } //Warning: do not rename these
+    private SpriteRenderer inputGraphic;
+
+    private enum GameKeyCode { w, a, d, j, k, l } //Warning: do not rename these
 
     private void Start()
     {
         inputGraphic = GetComponentInChildren<SpriteRenderer>();
         inputGraphic.enabled = false;
-        
-        // Initialize array of custom enums, cast to int
-        values = (int[])System.Enum.GetValues(typeof(GameKeyCode));
-        // Initialize array with bools that will hold the state of the key inputs
-        keys = new bool[values.Length];
-        // DUBUG LINE //foreach (int v in values) {Debug.Log($"enum value: {values.GetValue(v)}, enum integral value: {v}");}
+
+        // Initialize array of custom enums
+        codes = (GameKeyCode[])System.Enum.GetValues(typeof(GameKeyCode));
     }
 
     private void Update()
@@ -38,29 +34,31 @@ public class TutorialPopups : MonoBehaviour
         triggered = GetComponentInChildren<TutorialTriggerCheck>().triggered;
 
         UpdateGraphicVisibility();
-        CheckForCorrectInputIfTriggered();
+        CheckForCorrectInput();
     }
 
     private void UpdateGraphicVisibility()
     {
+        // Flip the contextual input button prompts on or off depending on trigger
         if (triggered)
-        { inputGraphic.enabled = false; } 
+        { inputGraphic.enabled = true; } 
         else { inputGraphic.enabled = false; }
     }
 
-    private void CheckForCorrectInputIfTriggered()
+    private void CheckForCorrectInput()
     {
         if (triggered)
         {
-            for (int i = 0; i < values.Length; i++)
+            // Iterate through enum array
+            foreach (GameKeyCode code in codes)
             {
-                // Set the state of the key in this iteration to the state of the corresponding key on the keyboard
-                keys[i] = Input.GetKey((KeyCode)values[i]);
-                // Check if the state of the key is true. If the key has been pressed, the state is true.
-                if (keys[i])
+                // Convert enum to string
+                string c = code.ToString();
+                // If if Input matches the enum of the current iteration
+                if (Input.GetKeyDown(c))
                 {
-                    // Check if the integral value of the enum in this iteration matches the integral value of the set keycode to dismiss
-                    if (values[i] == (int)keyCodeToDismiss)
+                    // Check if key being pressed down matches the key that will dismiss the contextual input button prompts
+                    if (c == keyCodeToDismiss.ToString())
                     {
                         // Disable the trigger zone that holds this script, graphic will disappear
                         gameObject.SetActive(false);
