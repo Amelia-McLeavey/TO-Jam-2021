@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 570717c8d67ac5e43aae3599f2541974
+<<<<<<< HEAD:TO-Jam-2021-Game/Assets/Prefabs/Camera.meta
+guid: 75f63585d9f51984d8ffd1515b0ea524
+=======
+guid: d6d0d81cac5699e498f541309262af52
+>>>>>>> main:TO-Jam-2021-Game/Assets/Prefabs/Environment/Platforms/DynamicPlatforms/Base.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
