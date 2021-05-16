@@ -6,8 +6,7 @@ using UnityEngine;
 public class ParticleClipSetup : MonoBehaviour
 {
     [SerializeField] float radius = 5f;
-
-    [SerializeField] Material blitMat;
+    
     [SerializeField] Material[] mats;
     [SerializeField] Transform[] radiiObjects;
 
@@ -27,10 +26,6 @@ public class ParticleClipSetup : MonoBehaviour
 
         for (int i = 0; i < mats.Length; i++) {
             mats[i].SetVector("_RenderSphere", new Vector4(transform.position.x, transform.position.y, transform.position.z, radius));
-        }
-
-        if (blitMat) {
-            CameraBlit.QueueBlit(blitMat);
         }
     }
 }
