@@ -91,9 +91,9 @@ GameObject:
   m_Component:
   - component: {fileID: 168562702114895876}
   - component: {fileID: 168562702114895899}
+  - component: {fileID: -9132063120123113830}
   - component: {fileID: 168562702114895898}
   - component: {fileID: 168562702114895877}
-  - component: {fileID: -9132063120123113830}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -130,18 +130,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
   playerBody: {fileID: 168562702114895898}
-  m_jumpApexHeight: 2.25
-  m_jumpApexTime: 0.3
+  m_jumpApexHeight: 1.6
+  m_jumpApexTime: 0.165
   m_jumpBufferTime: 0.1
-  m_terminalVelocity: 22
+  m_terminalVelocity: 17
   jumpBuffered: 0
   bufferWindow: 0
   currrentJumpBufferTime: 0
   minMaxJumpRatio: 2.25
   currentAdditionalJumpHeight: 0
   jumpReset: 0
-  m_accelerationTimeFromRest: 0.36
-  m_decelerationTimeToRest: 0.16
+  m_accelerationTimeFromRest: 0.1
+  m_decelerationTimeToRest: 0.1
   m_maxHorizontalSpeed: 6
   maxFallHorizontalVelocity: 0.75
   spaceReleased: 0
@@ -151,6 +151,21 @@ MonoBehaviour:
   platformLayer: {x: 0, y: 0}
   collisionThreshold: 0.005
   m_coyoteTime: 0.1
+--- !u!114 &-9132063120123113830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168562702114895897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e221c9546c0904083de994a9fdbf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AOERadius: 5
+  effectDuration: 5
+  slowMultiplier: 0.8
 --- !u!50 &168562702114895898
 Rigidbody2D:
   serializedVersion: 4
@@ -163,14 +178,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: b62ff8566100d3847b9b4e8455d90a15, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!70 &168562702114895877
 CapsuleCollider2D:
@@ -188,18 +203,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.5}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!114 &-9132063120123113830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168562702114895897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e221c9546c0904083de994a9fdbf90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AOERadius: 1
-  effectDuration: 1
-  slowMultiplier: 2
