@@ -27,7 +27,7 @@ public class PlayerAnimationMan : MonoBehaviour
             this.GetComponent<SpriteRenderer>().flipX = !this.GetComponent<SpriteRenderer>().flipX;
             prevDirection *= -1f;
         }
-
+        anim.SetInteger("EmotionNumber",baoe.lastEmotionAsInt);
         anim.SetFloat("VerSpeed", pc.velocity.y);
     }
 }
