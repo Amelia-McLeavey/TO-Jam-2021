@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:TO-Jam-2021-Game/Assets/Prefabs/Camera/CameraRestrict.prefab.meta
+guid: 623a7086065fc4f4491799f61671fdc7
+PrefabImporter:
+=======
 guid: 1e2f23d1cad1c0840a70fedafb94abec
 folderAsset: yes
 DefaultImporter:
+>>>>>>> main:TO-Jam-2021-Game/Assets/Vfx/Shaders.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

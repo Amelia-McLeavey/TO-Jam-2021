@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 1342720007}
   - component: {fileID: 1342720006}
   - component: {fileID: 1342720005}
+  - component: {fileID: 1342720008}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -512,14 +513,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1342720005
-AudioListener:
+--- !u!114 &1342720005
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342720004}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!20 &1342720006
 Camera:
   m_ObjectHideFlags: 0
@@ -577,6 +584,22 @@ Transform:
   m_Father: {fileID: 1355477296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1342720008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342720004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  parameter: VolumeSFX
+  TriggerEvent: 11
+  value: 1.04
 --- !u!1 &1355477295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sad Pop VFX
       objectReference: {fileID: 0}
+    - target: {fileID: 2075966343367934122, guid: 4bc9fd463f9be2d4692eebdfd9978fa2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2075966343367934126, guid: 4bc9fd463f9be2d4692eebdfd9978fa2,
         type: 3}
       propertyPath: m_RootOrder
@@ -1247,6 +1275,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anger Pop VFX
       objectReference: {fileID: 0}
+    - target: {fileID: 5026395309585139539, guid: fac34f2b9ece0334d833bb4498101ce9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5026395309585139540, guid: fac34f2b9ece0334d833bb4498101ce9,
         type: 3}
       propertyPath: m_RootOrder
@@ -1302,6 +1335,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5026395309741625290, guid: fac34f2b9ece0334d833bb4498101ce9,
+        type: 3}
+      propertyPath: emotion
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fac34f2b9ece0334d833bb4498101ce9, type: 3}
 --- !u!1001 &6381127538757845144
@@ -1311,10 +1349,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1270306192}
     m_Modifications:
+    - target: {fileID: 4014197250972468320, guid: 82bd1ad81773b3c458bf44320ad77cbc,
+        type: 3}
+      propertyPath: emotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381127539251070193, guid: 82bd1ad81773b3c458bf44320ad77cbc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381127539251070193, guid: 82bd1ad81773b3c458bf44320ad77cbc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381127539251070193, guid: 82bd1ad81773b3c458bf44320ad77cbc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6381127539647737099, guid: 82bd1ad81773b3c458bf44320ad77cbc,
         type: 3}
       propertyPath: m_Name
       value: Joy Pop VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381127539647737099, guid: 82bd1ad81773b3c458bf44320ad77cbc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6381127539647737100, guid: 82bd1ad81773b3c458bf44320ad77cbc,
         type: 3}
@@ -1369,6 +1432,21 @@ PrefabInstance:
     - target: {fileID: 6381127539647737100, guid: 82bd1ad81773b3c458bf44320ad77cbc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381127539939387241, guid: 82bd1ad81773b3c458bf44320ad77cbc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381127539939387241, guid: 82bd1ad81773b3c458bf44320ad77cbc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381127539939387241, guid: 82bd1ad81773b3c458bf44320ad77cbc,
+        type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
