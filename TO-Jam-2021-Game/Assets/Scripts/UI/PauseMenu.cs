@@ -8,7 +8,6 @@ public class PauseMenu : MonoBehaviour
     private bool gamePaused = false;
 
     // Access to canvases
-    [SerializeField] GameObject gameCanvas;
     [SerializeField] GameObject pauseCanvas;
     [SerializeField] GameObject controlsCanvas;
     [SerializeField] GameObject settingsCanvas;
@@ -36,7 +35,6 @@ public class PauseMenu : MonoBehaviour
 
             // Enable / disable canvases
             pauseCanvas.SetActive(true);
-            gameCanvas.SetActive(false);
         }
         // If game is currently paused
         else
@@ -48,13 +46,10 @@ public class PauseMenu : MonoBehaviour
             gamePaused = false;
 
             // Enable / disable canvases
-            gameCanvas.SetActive(true);
             pauseCanvas.SetActive(false);
             controlsCanvas.SetActive(false);
             settingsCanvas.SetActive(false);
             creditsCanvas.SetActive(false);
         }
-
-        print(gamePaused);
     }
 }
