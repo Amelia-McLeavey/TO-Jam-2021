@@ -282,6 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e221c9546c0904083de994a9fdbf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AOERadius: 1
-  effectDuration: 1
+  AOERadius: 2
+  timeToMaxRadius: 1.5
+  joyEffectDuration: 1
+  angerEffectDuration: 1
+  sadEffectDuration: 1
+  joyEffectCooldown: 1
+  angerEffectCooldown: 1
+  sadEffectCooldown: 1
   slowMultiplier: 2
