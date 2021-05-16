@@ -28,8 +28,8 @@ public class MainMenu : MonoBehaviour
     public void PlayButton()
     {
         // When play is clicked, load game
-        //SceneManager.LoadScene("Zoe");
-        print("Where game scene will be loaded");
+        SceneManager.LoadScene("Level_1");
+      //  print("Where game scene will be loaded");
     }
 
     public void ControlsButton()
