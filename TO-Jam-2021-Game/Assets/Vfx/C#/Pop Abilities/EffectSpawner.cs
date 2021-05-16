@@ -15,7 +15,7 @@ public class EffectSpawner : MonoBehaviour
     }
 
     void LateUpdate() {
-        if (transform.parent.localScale.x * 2 > maxRadius) {
+        if (transform.parent.localScale.x > maxRadius) {
             Destroy(gameObject);
         }
         
@@ -31,16 +31,4 @@ public class EffectSpawner : MonoBehaviour
             }
         }
     }
-
-    //private void OnTCOllisionEnter2D(Collider2D collision) {
-    //    if (collision.gameObject.layer == gameObject.layer) {
-    //        if (Vector2.Distance(collision.cGetContact(0).point, transform.position) > maxRadius) {
-    //            Destroy(gameObject);
-    //            return;
-    //        }
-
-    //        GameObject effect = Instantiate(effectPrefab, collision.GetContact(0).point, Quaternion.Euler(collision.GetContact(0).normal), collision.transform);
-    //        effect.GetComponent<CollisionEffect>().emotion = emotion;
-    //    }
-    //}
 }

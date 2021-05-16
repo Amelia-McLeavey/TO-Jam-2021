@@ -4826,6 +4826,7 @@ GameObject:
   - component: {fileID: 5026395309585139560}
   - component: {fileID: 5026395309585139542}
   - component: {fileID: 5026395309741625290}
+  - component: {fileID: 1309325794655472071}
   m_Layer: 0
   m_Name: Anger Pop VFX
   m_TagString: Untagged
@@ -4866,7 +4867,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0
-  blitMat: {fileID: 0}
   mats:
   - {fileID: 2100000, guid: 447727fa9923d4144b5b2a13a2a70312, type: 2}
   - {fileID: 2100000, guid: beb8caebeb1bed84eb989ece542accdb, type: 2}
@@ -9639,6 +9639,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23dca556298756840aaad244d2f71dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emotion: 0
+--- !u!114 &1309325794655472071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026395309585139539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e6878a3cbf0fc489fd9f3afd3ee025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5026395309990883149
