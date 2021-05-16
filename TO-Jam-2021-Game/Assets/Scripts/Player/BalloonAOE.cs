@@ -7,6 +7,13 @@ public class BalloonAOE : MonoBehaviour
     [HideInInspector]
     public int lastEmotionAsInt;
 
+    [SerializeField]
+    private GameObject JoyPopVFX;
+    [SerializeField]
+    private GameObject AngerPopVFX;
+    [SerializeField]
+    private GameObject SadPopVFX;
+
     [Range(0, 10)]
     [SerializeField]
     private float AOERadius = 2.0f;
@@ -52,7 +59,7 @@ public class BalloonAOE : MonoBehaviour
             // Collect all the Balloons the player has aquired
             GameObject[] Balloons = GameObject.FindGameObjectsWithTag("Balloon");
 
-            // Send command to Balloons to burst and set variables
+            // Set variables for emotion-effect types, send command to pop balloon, instantiate corresponding VFX
             foreach (GameObject balloon in Balloons)
             {
                 if (balloon.name == "Balloon 1" && keyPressed == "J")
@@ -61,6 +68,7 @@ public class BalloonAOE : MonoBehaviour
                     effectDuration = joyEffectDuration;
                     lastEmotionAsInt = (int)LastEmotion.Joy;
                     balloon.GetComponent<BallonMovement>().burstNow = true;
+                    Instantiate(JoyPopVFX, transform.position, Quaternion.identity, this.gameObject.transform);
                 }
                 else if (balloon.name == "Balloon 2" && keyPressed == "L")
                 {
@@ -68,6 +76,7 @@ public class BalloonAOE : MonoBehaviour
                     effectDuration = sadEffectDuration;
                     lastEmotionAsInt = (int)LastEmotion.Sad;
                     balloon.GetComponent<BallonMovement>().burstNow = true;
+                    Instantiate(SadPopVFX, transform.position, Quaternion.identity, this.gameObject.transform);
                 }
                 else if (balloon.name == "Balloon 3" && keyPressed == "K")
                 {
@@ -75,6 +84,7 @@ public class BalloonAOE : MonoBehaviour
                     effectDuration = angerEffectDuration;
                     lastEmotionAsInt = (int)LastEmotion.Anger;
                     balloon.GetComponent<BallonMovement>().burstNow = true;
+                    Instantiate(AngerPopVFX, transform.position, Quaternion.identity, this.gameObject.transform);
                 }
                 else
                 {
