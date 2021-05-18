@@ -13,6 +13,37 @@ public class RandomizeBalloonColour : MonoBehaviour
 
     void Start()
     {
+        SetAllOneColour();
+    }
+
+    private void SetAllOneColour()
+    {
+        // Select random colour
+        int colourNum = Random.Range(0, 3);
+
+        if (colourNum == 0)
+        {
+            colour = Color.red;
+        }
+        else if (colourNum == 1)
+        {
+            colour = Color.blue;
+        }
+        else
+        {
+            colour = Color.yellow;
+        }
+
+        // Loop through the array and assign each balloon one random colour
+        for (int i = 0; i < balloons.Length; i++)
+        {
+            // Set colour to balloon
+            balloons[i].color = colour;
+        }
+    }
+
+    private void SetAllRandomColour()
+    {
         // Loop through the array and assign each balloon a random colour
         for (int i = 0; i < balloons.Length; i++)
         {

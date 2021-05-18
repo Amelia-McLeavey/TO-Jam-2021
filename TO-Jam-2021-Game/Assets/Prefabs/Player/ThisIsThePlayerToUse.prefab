@@ -51,19 +51,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
   playerBody: {fileID: 3568542017372669926}
-  m_jumpApexHeight: 2.25
-  m_jumpApexTime: 0.3
+  m_jumpApexHeight: 3
+  m_jumpApexTime: 0.35
   m_jumpBufferTime: 0.1
   m_terminalVelocity: 22
   jumpBuffered: 0
-  bufferWindow: 0
+  bufferWindow: 2
   currrentJumpBufferTime: 0
-  minMaxJumpRatio: 2.25
+  minMaxJumpRatio: 2
   currentAdditionalJumpHeight: 0
   jumpReset: 0
-  m_accelerationTimeFromRest: 0.36
+  m_accelerationTimeFromRest: 0.3
   m_decelerationTimeToRest: 0.16
-  m_maxHorizontalSpeed: 6
+  m_maxHorizontalSpeed: 6.5
   maxFallHorizontalVelocity: 0.75
   spaceReleased: 0
   grounded: 0

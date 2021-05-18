@@ -36,7 +36,7 @@ public class CreditMovement : MonoBehaviour
         m_transform.anchoredPosition = Vector2.Lerp(origPosition, -origPosition *3, m_curve.Evaluate(time/2));
 
         m_text.fontSize =Mathf.RoundToInt( Mathf.Lerp(0, 39, m_curve.Evaluate(time * 5)));
-        m_text.color = Color.Lerp(Color.clear, Color.white, m_curve.Evaluate(time * 5));
+        m_text.color = Color.Lerp(Color.clear, Color.black, m_curve.Evaluate(time * 5));
 
         if (m_curve.Evaluate(time / 2) >= 1)
         {

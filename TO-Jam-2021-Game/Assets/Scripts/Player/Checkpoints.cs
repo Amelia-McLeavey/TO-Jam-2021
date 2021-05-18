@@ -11,9 +11,9 @@ public class Checkpoints : MonoBehaviour
     {
         if(lastActiveCheckpoint.transform.childCount > 0)
         {
-            foreach (GameObject child in transform)
+            foreach (Transform child in lastActiveCheckpoint.transform)
             {
-                child.SetActive(!child.activeSelf);
+                child.gameObject.SetActive(!child.gameObject.activeSelf);
             }
         }
     }
@@ -28,13 +28,16 @@ public class Checkpoints : MonoBehaviour
                 transform.position = lastActiveCheckpoint.transform.position;
                 break;
             case "Checkpoint":
-                // check if this is the first time we are runnning this code and last active checkpoint is not assigned yet
-                if (lastActiveCheckpoint != null)
+                if(lastActiveCheckpoint.GetInstanceID() != collision.gameObject.GetInstanceID())
                 {
+                    // check if this is the first time we are runnning this code and last active checkpoint is not assigned yet
+                    if (lastActiveCheckpoint != null)
+                    {
+                        swapActive();
+                    }
+                    lastActiveCheckpoint = collision.gameObject;
                     swapActive();
                 }
-                lastActiveCheckpoint = collision.gameObject;
-                swapActive();
                 break;
         }
     }

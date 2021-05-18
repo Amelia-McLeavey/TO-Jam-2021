@@ -9,7 +9,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject mainMenuCanvas;
     [SerializeField] GameObject controlsCanvas;
     [SerializeField] GameObject settingsCanvas;
-    [SerializeField] GameObject creditsCanvas;
+
+    // Fake back button to pop on the newly loaded screen
+    [SerializeField] GameObject balloonToPop;
 
     // Var to save the current loaded canvas
     private static GameObject currentCanvas;
@@ -26,8 +28,8 @@ public class MainMenu : MonoBehaviour
     public void PlayButton()
     {
         // When play is clicked, load game
-        //SceneManager.LoadScene("Zoe");
-        print("Where game scene will be loaded");
+        SceneManager.LoadScene("Level_1");
+      //  print("Where game scene will be loaded");
     }
 
     public void ControlsButton()
@@ -56,11 +58,8 @@ public class MainMenu : MonoBehaviour
     
     public void CreditsButton()
     {
-        // Turn on credits canvas
-        creditsCanvas.SetActive(true);
-
-        // Save as current canvas
-        currentCanvas = creditsCanvas;
+        // Load credits scene
+        SceneManager.LoadScene("Credits");
 
         // Turn off previously loaded canvas
         previousCanvas.SetActive(false);
@@ -73,6 +72,18 @@ public class MainMenu : MonoBehaviour
 
         // Turn off currently loaded canvas
         currentCanvas.SetActive(false);
+
+        // Turn on poping object, if available
+        if (balloonToPop != null)
+        {
+            balloonToPop.SetActive(true);
+        }
+    }
+
+    public void BackToMenuButton()
+    {
+        // Load the main menu scene
+        SceneManager.LoadScene("Main-Menu");
     }
 
     public void ExitButton()

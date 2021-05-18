@@ -9,6 +9,9 @@ public class VolumeSlider : MonoBehaviour
     [SerializeField] Text VolText;
 
     // Volume % control
+
+    [SerializeField]
+    bool BGM;
     public void Volume(float sliderValue)
     {
         // Convert slider value to appropriate output (from 0-2% to 0-100%)
@@ -18,5 +21,16 @@ public class VolumeSlider : MonoBehaviour
         // Update text
         VolText.text = sliderValue.ToString() + "%";
 
+
+        if (BGM)
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("VolumeBGM", sliderValue);
+        }
+        else
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("VolumeSFX", sliderValue);
+        }
     }
+
+
 }

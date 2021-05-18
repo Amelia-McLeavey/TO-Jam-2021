@@ -11,7 +11,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseCanvas;
     [SerializeField] GameObject controlsCanvas;
     [SerializeField] GameObject settingsCanvas;
-    [SerializeField] GameObject creditsCanvas;
+
+    // Pause Background (Darken)
+    [SerializeField] GameObject background;
 
     private void Update()
     {
@@ -35,6 +37,9 @@ public class PauseMenu : MonoBehaviour
 
             // Enable / disable canvases
             pauseCanvas.SetActive(true);
+
+            // Turn on background
+            background.SetActive(true);
         }
         // If game is currently paused
         else
@@ -49,7 +54,9 @@ public class PauseMenu : MonoBehaviour
             pauseCanvas.SetActive(false);
             controlsCanvas.SetActive(false);
             settingsCanvas.SetActive(false);
-            creditsCanvas.SetActive(false);
+
+            // Turn off background
+            background.SetActive(false);
         }
     }
 }
