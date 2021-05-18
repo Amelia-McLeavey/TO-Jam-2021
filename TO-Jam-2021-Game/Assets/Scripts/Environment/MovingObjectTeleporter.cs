@@ -35,9 +35,10 @@ public class MovingObjectTeleporter : MonoBehaviour
             }
 
             // teleport the object
+            collision.gameObject.transform.position = TeleportLocation.transform.position;
             //FMOD teleport audo
             m_audio.PlayRock(4, 4);
-            collision.gameObject.transform.position = TeleportLocation.transform.position;
+
         }
     }
 }
