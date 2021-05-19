@@ -14632,7 +14632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f863181c3afe624481db88b46b98cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  maxRadius: 5
+  radiusPercent: 0
   mats:
   - {fileID: 2100000, guid: 385c1c7e81f2d4d4c96e91484c87edcb, type: 2}
   - {fileID: 2100000, guid: ee253024caf054341a14a4e3ed13223a, type: 2}
@@ -14641,6 +14642,7 @@ MonoBehaviour:
   - {fileID: 2075966342876608639}
   - {fileID: 2075966342021933993}
   - {fileID: 2075966341661898893}
+  maxRadiiObjects: []
 --- !u!95 &2075966343367934127
 Animator:
   serializedVersion: 3
