@@ -60,7 +60,9 @@ public class DynamicPlatformController : MonoBehaviour
     
     private void Start()
     {
-     
+
+        _rigidbody = GetComponent<Rigidbody2D>();
+
         _gravityBaseScaleValue = _rigidbody.gravityScale;
         
         // ensure the platform starts at its transformTarget1 position if there is one
@@ -105,7 +107,7 @@ public class DynamicPlatformController : MonoBehaviour
     #endregion
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         UpdateTimers();
 
@@ -370,7 +372,7 @@ public class DynamicPlatformController : MonoBehaviour
     }
 
     // ensure that when this collides with another object it stops its translation immediately
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == gameObject.layer && collision.gameObject.tag != "Player")
         {

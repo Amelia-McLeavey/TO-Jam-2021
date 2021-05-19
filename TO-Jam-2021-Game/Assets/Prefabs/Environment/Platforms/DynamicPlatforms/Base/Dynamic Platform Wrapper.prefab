@@ -1173,7 +1173,6 @@ GameObject:
   - component: {fileID: 8077689519910299112}
   - component: {fileID: 6941129393085176129}
   - component: {fileID: 8883299066333082250}
-  - component: {fileID: 8823864211397403292}
   m_Layer: 13
   m_Name: Mesh
   m_TagString: Untagged
@@ -1242,19 +1241,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8823864211397403292
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8527510099143431430}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.73, y: 2.52, z: 1.85}
-  m_Center: {x: 0, y: 0, z: 0.92}
 --- !u!1 &9148409643110470184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1384,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &9148409643358328602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1423,7 +1409,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.6, y: 2.6}
   m_EdgeRadius: 0
 --- !u!114 &6056845857279281815
 MonoBehaviour:
