@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SelfDestruct : MonoBehaviour
 {
-    private void Awake() {
-        Destroy(gameObject, 10);
+    public void DestroySelf() {
+        GetComponent<ParticleClipSetup>().ResetMaterials();
+        Destroy(gameObject);
     }
 }

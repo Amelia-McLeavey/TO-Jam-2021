@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 8
+      value: 5.5
       mode: 0
       spread: 0
       speed:
@@ -5499,7 +5499,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 8
+      value: 5.5
       mode: 0
       spread: 0
       speed:
@@ -9717,7 +9717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f863181c3afe624481db88b46b98cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  maxRadius: 5
+  radiusPercent: 0
   mats:
   - {fileID: 2100000, guid: e379fb1a27596514ab3823788872f16b, type: 2}
   - {fileID: 2100000, guid: f925ce8c9e90ccf46a33f2e29ca3b6ce, type: 2}
@@ -9726,6 +9727,9 @@ MonoBehaviour:
   radiiObjects:
   - {fileID: 6381127539251070193}
   - {fileID: 6381127539939387241}
+  maxRadiiObjects:
+  - {fileID: 6381127538634027409}
+  - {fileID: 6381127538878900218}
 --- !u!114 &4014197250972468320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14637,8 +14641,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
-      minScalar: 3.5
+      scalar: 1.7
+      minScalar: 1.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
