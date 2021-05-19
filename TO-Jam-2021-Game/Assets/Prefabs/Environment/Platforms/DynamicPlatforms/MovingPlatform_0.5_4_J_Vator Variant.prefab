@@ -7,6 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8527510099143431430, guid: 404702273aaef3b46a36a6aaece5a416,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823864211397403292, guid: 404702273aaef3b46a36a6aaece5a416,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883299066333082250, guid: 404702273aaef3b46a36a6aaece5a416,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9148409643110470615, guid: 404702273aaef3b46a36a6aaece5a416,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47,6 +62,16 @@ PrefabInstance:
       propertyPath: _binaryVatorPlatform
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9148409643358328602, guid: 404702273aaef3b46a36a6aaece5a416,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148409643358328602, guid: 404702273aaef3b46a36a6aaece5a416,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.68
+      objectReference: {fileID: 0}
     - target: {fileID: 9148409643694296627, guid: 404702273aaef3b46a36a6aaece5a416,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +81,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148409644070056938, guid: 404702273aaef3b46a36a6aaece5a416,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9148409644666341102, guid: 404702273aaef3b46a36a6aaece5a416,
         type: 3}
@@ -115,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 9148409644666341103, guid: 404702273aaef3b46a36a6aaece5a416,
         type: 3}
       propertyPath: m_Name
-      value: MovingPlatform_0.5_4_J_Vator
+      value: MovingPlatform_0.5_4_J_Vator Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 404702273aaef3b46a36a6aaece5a416, type: 3}

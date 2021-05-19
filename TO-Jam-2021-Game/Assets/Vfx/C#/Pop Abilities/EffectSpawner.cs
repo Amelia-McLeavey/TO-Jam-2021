@@ -10,8 +10,9 @@ public class EffectSpawner : MonoBehaviour
     CircleCollider2D col;
     List<Collider2D> hitColliders = new List<Collider2D>();
 
-    private void Start() {
+    private void Awake() {
         col = GetComponent<CircleCollider2D>();
+        maxRadius = maxRadius == 0 ? transform.parent.parent.GetComponent<ParticleClipSetup>().maxRadius : maxRadius;
     }
 
     void LateUpdate() {
@@ -43,6 +44,10 @@ public class EffectSpawner : MonoBehaviour
                 effect.GetComponent<CollisionEffect>().emotion = emotion;
                 effect.transform.up = (transform.position - point).normalized;
             }
+        }
+
+        if (transform.parent.localScale.x == maxRadius) {
+            Destroy(gameObject);
         }
     }
 }
