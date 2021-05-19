@@ -21,7 +21,21 @@ public class EffectSpawner : MonoBehaviour
         
         Collider2D[] hitCols = Physics2D.OverlapCircleAll((Vector2)transform.position + col.offset, col.radius * transform.lossyScale.x, ~(1<<0));
         foreach (Collider2D hitCol in hitCols) {
-            if (!hitColliders.Contains(hitCol) && hitCol.gameObject.layer == gameObject.layer) {
+
+            //check if platform is interactable with this ability
+            DynamicPlatformController platform = hitCol.GetComponent<DynamicPlatformController>();
+
+            if (platform == null) {
+                continue;
+            }
+
+            bool isInteractable = false;
+            isInteractable = emotion == Emotion.Anger && (platform._type == "Shove" || platform._type == "Universal") ? true : isInteractable;
+            isInteractable = emotion == Emotion.Joy && (platform._type == "Float" || platform._type == "Universal") ? true : isInteractable;
+            isInteractable = emotion == Emotion.Sadness && platform._affectedBySlow ? true : isInteractable;
+
+            //apply effect
+            if (!hitColliders.Contains(hitCol) && isInteractable) {
                 hitColliders.Add(hitCol);
 
                 Vector3 point = hitCol.ClosestPoint(transform.position);

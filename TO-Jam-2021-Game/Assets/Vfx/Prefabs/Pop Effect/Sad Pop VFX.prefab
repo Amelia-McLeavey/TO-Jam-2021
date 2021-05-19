@@ -14620,7 +14620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e45eed7795f93246b50405e6868c53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRadius: 9
+  maxRadius: 5
   effectPrefab: {fileID: 4950579346615153633, guid: 7404c09097a73ec468a793815ea486ba,
     type: 3}
   emotion: 1
