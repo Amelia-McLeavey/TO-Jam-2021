@@ -1948,6 +1948,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThisIsThePlayerToUse
       objectReference: {fileID: 0}
+    - target: {fileID: 3568542017372669926, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568542017372669926, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3568542017372669944, guid: aa69eec6aaf48444eb5de5026af087c5,
         type: 3}
       propertyPath: m_RootOrder
