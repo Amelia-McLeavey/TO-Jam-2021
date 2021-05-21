@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9185918806984340809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-8374472354795794742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EmotionPickUp/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-8217110754026989886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EmotionPickUp/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6777554306591976053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,6 +83,66 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 192
+--- !u!114 &-6719150597192046811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emotion/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-6499107464615155067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-6412812645858505896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emotion/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-5965557391227042492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,6 +166,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2808
+--- !u!114 &-5504803724941594283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-5481566458580438669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emotion/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4352748274829377333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +226,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 8121664002528041817}
+  - {fileID: 7256508461525602734}
   MinDistance: 0
   MaxDistance: 0
   Length: 194220
@@ -83,6 +243,26 @@ MonoBehaviour:
   m_Name: parameter:/RockMovement/RockAction
   m_EditorClassIdentifier: 
   Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4110646531802769349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
   Min: 0
   Max: 10
   Default: 0
@@ -110,10 +290,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 3996313109170549560}
+  - {fileID: -6719150597192046811}
   MinDistance: 0
   MaxDistance: 0
-  Length: 124056
+  Length: 2352
+--- !u!114 &-3968592503394222255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3895310733004571342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +325,26 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/EmotionPickUp/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-3194268950068308247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Emotion
   m_EditorClassIdentifier: 
   Name: Emotion
   Min: 0
@@ -200,6 +420,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2650
+--- !u!114 &-1646926058690779100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1210372042768889481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +502,7 @@ MonoBehaviour:
   ID:
     data1: 1840146871
     data2: 830205969
-  Exists: 1
+  Exists: 0
 --- !u!114 &-106174836374782883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +518,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Character
-  lastModified: 637570378640574634
+  lastModified: 637572079365987878
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -311,17 +551,17 @@ MonoBehaviour:
   - {fileID: -5965557391227042492}
   - {fileID: 683770116876628340}
   - {fileID: 800178441959025822}
-  - {fileID: 7855663935678582691}
-  - {fileID: -4352748274829377333}
-  - {fileID: 6063019881853036739}
+  - {fileID: 5440652283271812683}
+  - {fileID: 991232744586797406}
+  - {fileID: 7395708758281337848}
   EditorParameters:
-  - {fileID: -199386499818659633}
-  - {fileID: 7294413611417647814}
+  - {fileID: 7140423606982700940}
+  - {fileID: 8569201264748003833}
   MasterBanks:
   - {fileID: 5586901619699684973}
   StringsBanks:
   - {fileID: 4741657495912833882}
-  stringsBankWriteTime: 637570378640604550
+  stringsBankWriteTime: 637572079366386805
   cacheVersion: 6
 --- !u!114 &127336888090753370
 MonoBehaviour:
@@ -343,6 +583,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &161792714149474272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EmotionPickUp/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &683770116876628340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +623,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -3895310733004571342}
+  - {fileID: -8217110754026989886}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -387,10 +647,34 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4223389195277340808}
+  - {fileID: -1646926058690779100}
   MinDistance: 0
   MaxDistance: 0
   Length: 5452
+--- !u!114 &991232744586797406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/BGM
+  guid: 58279b124ea5014d95f88b2a2282079b
+  Banks:
+  - {fileID: 1313704346099393545}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3194268950068308247}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 194220
 --- !u!114 &1313704346099393545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,10 +690,30 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 637570378640973564
+  lastModified: 637572079366865531
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &1532962375479308734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &1580318680327687014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,10 +729,30 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637570378640594821
+  lastModified: 637572079366346909
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &1729300814748001163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &2381802195851762787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,10 +774,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 4421390494815997945}
+  - {fileID: -4110646531802769349}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2628606842440054390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &2747051827308968663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,12 +933,115 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637570378640604550
+  lastModified: 637572079366386805
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1652
   Exists: 1
+--- !u!114 &4990471703254436516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5272444634479743413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5399259437482333174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5440652283271812683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Credits
+  m_EditorClassIdentifier: 
+  Path: event:/Credits
+  guid: 0ca19d4cdb01604db981be931e8265cb
+  Banks:
+  - {fileID: 1313704346099393545}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 214151
+--- !u!114 &5560034775569776067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emotion/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5586901619699684973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,7 +1057,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637567698733773442
+  lastModified: 637572079366366858
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -637,6 +1084,66 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3056
+--- !u!114 &7140423606982700940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VolumeSFX
+  m_EditorClassIdentifier: 
+  Name: VolumeSFX
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1840146871
+    data2: 830205969
+  Exists: 1
+--- !u!114 &7181925304599219136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EmotionPickUp/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &7256508461525602734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7294413611417647814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +1163,30 @@ MonoBehaviour:
   ID:
     data1: 3456210756
     data2: 3941617650
-  Exists: 1
+  Exists: 0
+--- !u!114 &7395708758281337848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UIButton
+  m_EditorClassIdentifier: 
+  Path: event:/UIButton
+  guid: e76990bea04b5c48a3eb80eacc09e716
+  Banks:
+  - {fileID: 1313704346099393545}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3056
 --- !u!114 &7855663935678582691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,6 +1233,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 696
+--- !u!114 &7915777807401478139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &8121664002528041817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,4 +1272,24 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 1
+--- !u!114 &8569201264748003833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VolumeBGM
+  m_EditorClassIdentifier: 
+  Name: VolumeBGM
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3456210756
+    data2: 3941617650
   Exists: 1

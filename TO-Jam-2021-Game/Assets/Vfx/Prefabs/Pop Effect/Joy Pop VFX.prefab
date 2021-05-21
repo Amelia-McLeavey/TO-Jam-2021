@@ -9742,7 +9742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23dca556298756840aaad244d2f71dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotion: 0
+  emotion: 1
 --- !u!95 &6381127539647737088
 Animator:
   serializedVersion: 3
