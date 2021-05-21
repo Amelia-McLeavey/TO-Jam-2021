@@ -80,22 +80,16 @@ public class PlatformBinding : MonoBehaviour
 
         //Debug.DrawRay(tempRayCastOrigin, Vector2.down, Color.white, 1);
 
-        // if we hit something bind to it
+        // if we hit something bind to it, otherwise set this block to not be at rest
         if (hit)
         {
             transform.SetParent(hit.collider.gameObject.transform, true);
 
-            if(!dynamicScript._atRest)
-            {
-                dynamicScript.ToggleAtRest();
-            }
+            dynamicScript._atRest = true;
 
         } else
         {
-            if (dynamicScript._atRest)
-            {
-                dynamicScript.ToggleAtRest();
-            }
+            dynamicScript._atRest = false;
         }
     }
 
