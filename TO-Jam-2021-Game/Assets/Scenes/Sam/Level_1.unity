@@ -3039,6 +3039,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: AOERadius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: timeToMaxRadius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: joyEffectCooldown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: joyEffectDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: sadEffectCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: sadEffectDuration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: angerEffectCooldown
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69eec6aaf48444eb5de5026af087c5, type: 3}
 --- !u!1001 &1438187960
