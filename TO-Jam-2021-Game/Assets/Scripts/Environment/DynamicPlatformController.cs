@@ -50,49 +50,48 @@ public class DynamicPlatformController : MonoBehaviour
     // stored positions the platform can move to 
     public GameObject _transformTarget1;
     public GameObject _transformTarget2;
-
+    PlatformAudio m_audio;
 
 
     #region Initialization
 
-    PlatformAudio m_audio;
-    
-    
+    // initilialize the dynamic platform
     private void Start()
     {
-
+        // get this dynamic platforms rigidbody
         _rigidbody = GetComponent<Rigidbody2D>();
 
+        // store this dyamic platforms base gravity scale value incase it is needed later
         _gravityBaseScaleValue = _rigidbody.gravityScale;
-        
-        // ensure the platform starts at its transformTarget1 position if there is one
-        if(_binaryVatorPlatform && !_horizontalVator)
-        {
-            _gravityLocked = true;
-        }
 
+        // ensure that binary vator platforms have the correct settings
         if (_binaryVatorPlatform)
         {
+            // move this vator to its starting position
             transform.position = _transformTarget1.transform.position;
-        }
 
-        if (_binaryVatorPlatform && _horizontalVator)
-        {
+            // ensure that it has no gravity scale and a velocity of 0
             _rigidbody.gravityScale = 0;
             _rigidbody.velocity = new Vector3(0, 0, 0);
-        }
 
-        // if this is an automatic vator set it to begin moving immediately
-        if(_automaticVator)
-        {
-            DistSwapTransformTarget();
+            if(!_horizontalVator)
+            {
+                _gravityLocked = true;
+            }
 
-            if(_horizontalVator)
+            // if this is an automatic vator set it to begin moving immediately
+            if (_automaticVator)
             {
-                _translatingX = true;
-            } else 
-            {
-                _translatingY = true;
+                DistSwapTransformTarget();
+
+                if (_horizontalVator)
+                {
+                    _translatingX = true;
+                }
+                else
+                {
+                    _translatingY = true;
+                }
             }
         }
 
@@ -196,7 +195,7 @@ public class DynamicPlatformController : MonoBehaviour
             if (!_automaticVator)
             {
                 _translatingX = false;
-                _target.x = 0;
+                _target.x = gameObject.transform.position.x;
             } else
             {
                 DistSwapTransformTarget();
@@ -214,7 +213,7 @@ public class DynamicPlatformController : MonoBehaviour
             {
                 _translatingY = false;
 
-                _target.y = 0;
+                _target.y = gameObject.transform.position.y;
 
                 _floating = true;
 
@@ -364,12 +363,6 @@ public class DynamicPlatformController : MonoBehaviour
         }
     }
     #endregion
-
-    // changes the state of booleans
-    public void ToggleAtRest()
-    {
-        _atRest = !_atRest;
-    }
 
     // ensure that when this collides with another object it stops its translation immediately
     private void OnCollisionEnter2D(Collision2D collision)
