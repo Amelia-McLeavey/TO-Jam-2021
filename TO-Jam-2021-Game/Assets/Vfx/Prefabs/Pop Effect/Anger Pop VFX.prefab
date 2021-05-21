@@ -105,7 +105,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -4866,15 +4866,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f863181c3afe624481db88b46b98cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  maxRadius: 5
+  radiusPercent: 0
   mats:
   - {fileID: 2100000, guid: 447727fa9923d4144b5b2a13a2a70312, type: 2}
   - {fileID: 2100000, guid: beb8caebeb1bed84eb989ece542accdb, type: 2}
   - {fileID: 2100000, guid: 2850b4d19936f59478e9a03d5657e9a2, type: 2}
   radiiObjects:
   - {fileID: 5026395309990883150}
-  - {fileID: 5026395310085052596}
   - {fileID: 5026395310518796116}
+  maxRadiiObjects:
+  - {fileID: 5026395310085052596}
 --- !u!114 &5026395309585139561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4979,13 +4981,13 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5026395309585139539}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -9853,7 +9855,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -10411,7 +10413,7 @@ ParticleSystem:
     angle: 0
     length: 3.76
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.95
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 90, y: 0, z: 0}
@@ -10494,7 +10496,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 5.5
       mode: 0
       spread: 0
       speed:
@@ -14618,7 +14620,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -19429,7 +19431,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -24227,7 +24229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e45eed7795f93246b50405e6868c53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRadius: 9
+  maxRadius: 5
   effectPrefab: {fileID: 4950579346615153633, guid: 7404c09097a73ec468a793815ea486ba,
     type: 3}
   emotion: 2

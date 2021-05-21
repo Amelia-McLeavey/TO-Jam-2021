@@ -70,21 +70,15 @@ public class PlatformBinding : MonoBehaviour
 
         rayCastOffset = (rayCastOffset - (rayCastOffset * (edgeBindingColliderDistancePercentage * tempEdgeBindingBoundMultplier))) * direction;
 
-        Debug.Log("RaycastOffset" + rayCastOffset);
-
         Vector3 tempRayCastOrigin = transform.position;
-
-        Debug.Log(tempRayCastOrigin);
 
         tempRayCastOrigin.x = tempRayCastOrigin.x + rayCastOffset;
 
         tempRayCastOrigin.y = tempRayCastOrigin.y - ((GetComponent<BoxCollider2D>().size.y / 2) + effectiveZero);
 
-        Debug.Log(tempRayCastOrigin);
-
         RaycastHit2D hit = Physics2D.Raycast(tempRayCastOrigin, Vector2.down, collisionThreshold, LayerMask.GetMask("Platform"));
 
-        Debug.DrawRay(tempRayCastOrigin, Vector2.down, Color.white, 1);
+        //Debug.DrawRay(tempRayCastOrigin, Vector2.down, Color.white, 1);
 
         // if we hit something bind to it
         if (hit)

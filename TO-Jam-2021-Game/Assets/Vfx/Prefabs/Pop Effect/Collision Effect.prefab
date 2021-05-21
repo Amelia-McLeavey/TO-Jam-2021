@@ -4879,11 +4879,11 @@ MonoBehaviour:
   effectMaterial: {fileID: 4800000, guid: 8633f8ee1d2eceb4789db082d59210f0, type: 3}
   noiseTexture: {fileID: 2800000, guid: 8c2d3b4da8670c14f9404cec5281a4e5, type: 3}
   emotion: 0
-  joyDuration: 8
+  joyDuration: 3
   joyColor: {r: 1, g: 0.99997795, b: 0, a: 0.18039216}
-  angerDuration: 8
+  angerDuration: 1
   angerColor: {r: 1, g: 0.07661381, b: 0, a: 0.19215687}
-  sadDuration: 8
+  sadDuration: 4
   sadColor: {r: 0, g: 0.58571386, b: 1, a: 0.19215687}
 --- !u!1 &5636770229900720835
 GameObject:

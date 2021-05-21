@@ -609,6 +609,15 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null && hit.collider.tag == "Moving")
         {
+            if(IsGrounded())
+            {
+                transform.parent = hit.collider.gameObject.transform;
+            } else
+            {
+                transform.SetParent(null);
+            }
+
+            /*
             MovingPlatform script = hit.collider.GetComponent<MovingPlatform>();
             DynamicPlatformController script1 = hit.collider.GetComponent<DynamicPlatformController>();
 
@@ -637,7 +646,10 @@ public class PlayerController : MonoBehaviour
                     transform.position = transform.position + new Vector3(script1._delta.x, 0, 0);
                 }
             }
-
+            */
+        } else
+        {
+            transform.SetParent(null);
         }
     }
 

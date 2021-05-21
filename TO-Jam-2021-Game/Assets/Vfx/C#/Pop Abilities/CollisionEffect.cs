@@ -29,7 +29,7 @@ public class CollisionEffect : MonoBehaviour
 
     void Awake()
     {
-        meshRenderer = transform.parent.GetComponent<MeshRenderer>();
+        meshRenderer = transform.parent.GetComponentInChildren<MeshRenderer>();
         savedMaterial = meshRenderer.material.shader;
         meshRenderer.material.shader = effectMaterial;
 

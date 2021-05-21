@@ -75,4 +75,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RenderSphere: {r: 111.3305, g: 13.913473, b: 0, a: 12}
+    - _RenderSphere: {r: 0, g: 0, b: -1000, a: 0}
