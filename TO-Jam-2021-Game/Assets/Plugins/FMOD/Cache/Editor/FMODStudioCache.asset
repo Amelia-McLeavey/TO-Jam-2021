@@ -166,6 +166,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2808
+--- !u!114 &-5709205025720526010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-5703318383928987737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RockMovement/RockAction
+  m_EditorClassIdentifier: 
+  Name: RockAction
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5504803724941594283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +330,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6719150597192046811}
+  - {fileID: 2541528187448990911}
   MinDistance: 0
   MaxDistance: 0
   Length: 2352
@@ -420,6 +460,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2650
+--- !u!114 &-1964263409944467969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EmotionPickUp/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1646926058690779100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +578,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Character
-  lastModified: 637572079365987878
+  lastModified: 637572904602470924
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -561,7 +621,7 @@ MonoBehaviour:
   - {fileID: 5586901619699684973}
   StringsBanks:
   - {fileID: 4741657495912833882}
-  stringsBankWriteTime: 637572079366386805
+  stringsBankWriteTime: 637572904603120378
   cacheVersion: 6
 --- !u!114 &127336888090753370
 MonoBehaviour:
@@ -623,7 +683,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -8217110754026989886}
+  - {fileID: -1964263409944467969}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -647,7 +707,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1646926058690779100}
+  - {fileID: -5703318383928987737}
   MinDistance: 0
   MaxDistance: 0
   Length: 5452
@@ -671,7 +731,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3194268950068308247}
+  - {fileID: -5709205025720526010}
   MinDistance: 0
   MaxDistance: 0
   Length: 194220
@@ -690,7 +750,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 637572079366865531
+  lastModified: 637572904605787778
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -729,7 +789,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637572079366346909
+  lastModified: 637572904603110160
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -774,10 +834,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -4110646531802769349}
+  - {fileID: 3287968111757940558}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2541528187448990911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emotion/Emotion
+  m_EditorClassIdentifier: 
+  Name: Emotion
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2628606842440054390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,6 +913,26 @@ MonoBehaviour:
   Name: Emotion
   Min: 0
   Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3287968111757940558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
   Default: 0
   ID:
     data1: 0
@@ -933,7 +1033,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637572079366386805
+  lastModified: 637572904603120378
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1057,7 +1157,7 @@ MonoBehaviour:
   Path: FMOD/Balloon/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637572079366366858
+  lastModified: 637567738255257311
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1084,6 +1184,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3056
+--- !u!114 &6256273803196459899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Collectable/CollectCombo
+  m_EditorClassIdentifier: 
+  Name: CollectCombo
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &7140423606982700940
 MonoBehaviour:
   m_ObjectHideFlags: 0

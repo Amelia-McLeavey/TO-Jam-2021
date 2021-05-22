@@ -45,15 +45,16 @@ public class BalloonAOE : MonoBehaviour
     private float effectDuration;
     private float effectCooldown;
 
-    private bool inputIsCool = true;
+    private bool inputJcool = true;
+    private bool inputKcool = true;
+    private bool inputLcool = true;
+
 
     private enum LastEmotion { None, Anger, Sad, Joy }
 
     public void PopBalloon(string keyPressed)
     {
-        if (inputIsCool)
-        {
-            inputIsCool = false;
+
             DebugDrawAOE(keyPressed);
 
             // Collect all the Balloons the player has aquired
@@ -62,26 +63,26 @@ public class BalloonAOE : MonoBehaviour
             // Set variables for emotion-effect types, send command to pop balloon, instantiate corresponding VFX
             foreach (GameObject balloon in Balloons)
             {
-                if (balloon.name == "Balloon 1" && keyPressed == "J")
+                if (balloon.name == "Balloon 1" && keyPressed == "J" && inputJcool)
                 {
-                    effectCooldown = joyEffectCooldown;
-                    effectDuration = joyEffectDuration;
+                    inputJcool = false;
+                    StartCoroutine(EffectDelay(keyPressed, joyEffectCooldown + joyEffectDuration));
                     lastEmotionAsInt = (int)LastEmotion.Joy;
                     balloon.GetComponent<BallonMovement>().burstNow = true;
                     Instantiate(JoyPopVFX, transform.position, Quaternion.identity, this.gameObject.transform);
                 }
-                else if (balloon.name == "Balloon 2" && keyPressed == "L")
+                else if (balloon.name == "Balloon 2" && keyPressed == "L" && inputLcool)
                 {
-                    effectCooldown = sadEffectCooldown;
-                    effectDuration = sadEffectDuration;
+                    inputLcool = false;
+                    StartCoroutine(EffectDelay(keyPressed, sadEffectCooldown + sadEffectDuration));
                     lastEmotionAsInt = (int)LastEmotion.Sad;
                     balloon.GetComponent<BallonMovement>().burstNow = true;
                     Instantiate(SadPopVFX, transform.position, Quaternion.identity, this.gameObject.transform);
                 }
-                else if (balloon.name == "Balloon 3" && keyPressed == "K")
+                else if (balloon.name == "Balloon 3" && keyPressed == "K" && inputKcool)
                 {
-                    effectCooldown = angerEffectCooldown;
-                    effectDuration = angerEffectDuration;
+                    inputKcool = false;
+                    StartCoroutine(EffectDelay(keyPressed, angerEffectCooldown + angerEffectDuration));
                     lastEmotionAsInt = (int)LastEmotion.Anger;
                     balloon.GetComponent<BallonMovement>().burstNow = true;
                     Instantiate(AngerPopVFX, transform.position, Quaternion.identity, this.gameObject.transform);
@@ -90,17 +91,23 @@ public class BalloonAOE : MonoBehaviour
                 {
                     Debug.Log("NO MATCH BETWEEN BALLOONS HELD AND KEYPRESSED");
                 }
-            }
+            }          
 
-            StartCoroutine(EffectDelay(keyPressed));
-        }
     }
 
-    private IEnumerator EffectDelay(string keyPressed)
+    private IEnumerator EffectDelay(string keyPressed, float effectDelay)
     {
         yield return new WaitForSeconds(timeToMaxRadius);
         EffectArea(keyPressed);
-        StartCoroutine(EffectUsageCooldown());
+
+        yield return new WaitForSeconds(effectDelay);
+
+        switch (keyPressed)
+        {
+            case "J": inputJcool = true; break;
+            case "K": inputKcool = true; break;
+            case "L": inputLcool = true; break;
+        }
     }
 
     public void EffectArea(string keyPressed)
@@ -144,12 +151,6 @@ public class BalloonAOE : MonoBehaviour
                 }
             }
         }
-    }
-
-    private IEnumerator EffectUsageCooldown()
-    {
-        yield return new WaitForSeconds(effectCooldown + effectDuration);
-        inputIsCool = true;
     }
 
     // A temporary Debug Draw method to show us where the area of effect is until we have a proper VFX, only visible in Scene view.
