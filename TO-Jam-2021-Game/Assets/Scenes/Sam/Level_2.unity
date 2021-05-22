@@ -7451,7 +7451,7 @@ PrefabInstance:
     - target: {fileID: 7846055704282235544, guid: 4835d7d0247ad1e4880380572d8abd1b,
         type: 3}
       propertyPath: ropeLength
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7846055704282235545, guid: 4835d7d0247ad1e4880380572d8abd1b,
         type: 3}
