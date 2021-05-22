@@ -25,7 +25,7 @@ public class Checkpoints : MonoBehaviour
         switch(collision.tag)
         {
             case "KillZone":
-                transform.position = lastActiveCheckpoint.transform.position;
+                transform.position = new Vector3 (lastActiveCheckpoint.transform.position.x, lastActiveCheckpoint.transform.position.y, transform.position.z);
                 break;
             case "Checkpoint":
                 if(lastActiveCheckpoint.GetInstanceID() != collision.gameObject.GetInstanceID())

@@ -1257,6 +1257,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
+        type: 3}
+      propertyPath: angerEffectCooldown
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3733722602127851825, guid: aa69eec6aaf48444eb5de5026af087c5,
         type: 3}
       propertyPath: m_SortingOrder
