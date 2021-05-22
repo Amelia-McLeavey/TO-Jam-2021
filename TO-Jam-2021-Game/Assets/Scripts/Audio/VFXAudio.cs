@@ -20,6 +20,7 @@ public class VFXAudio : MonoBehaviour
 
     public void StopEmotion()
     {
-        emote.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+        emote.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }
