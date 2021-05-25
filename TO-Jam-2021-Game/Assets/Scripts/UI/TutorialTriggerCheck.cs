@@ -9,10 +9,12 @@ public class TutorialTriggerCheck : MonoBehaviour
 
     private void Update()
     {
-        if (triggered)
-        { GetComponentInChildren<SpriteRenderer>().color = new Color(0f, 1f, 0f, 0.5f); }
-        else
-        { GetComponentInChildren<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f); }
+        if (transform.GetChild(0).gameObject.activeInHierarchy) { 
+            if (triggered)
+            { GetComponentInChildren<SpriteRenderer>().color = new Color(0f, 1f, 0f, 0.5f); }
+            else
+            { GetComponentInChildren<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f); }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -51,34 +51,42 @@ public class BallonMovement : MonoBehaviour
 
         if (!floatingAway)
         {
-            if (burstNow)
+            if (BalloonHasBurst)
             {
-                burstNow = false;
-                burstBalloon();
-            }
-
-            if (Vector2.Distance(this.transform.position, holder.position) > ropeLength)
-            {
-                //find pos on radius circle
-                //outOfRange();
-                dragBalloons(maxMoveSpeed * 3f);
-
-                if (Vector2.Distance(this.transform.position, holder.position) > 3 * ropeLength)
-                {
-                    this.transform.position = holder.position;
-                }
+                this.transform.position = holder.position;
             }
             else
             {
-                if (Mathf.Abs(holderRb.velocity.x) >= 0.5f)
+                if (burstNow)
                 {
-                    dragBalloons(maxMoveSpeed);
+                    burstNow = false;
+                    burstBalloon();
                 }
-                else if (!BalloonHasBurst)
+
+                if (Vector2.Distance(this.transform.position, holder.position) > ropeLength)
                 {
-                    floatingBalloons();
+                    //find pos on radius circle
+                    //outOfRange();
+                    dragBalloons(maxMoveSpeed * 3f);
+
+                    if (Vector2.Distance(this.transform.position, holder.position) > 3 * ropeLength)
+                    {
+                        this.transform.position = holder.position;
+                    }
+                }
+                else
+                {
+                    if (Mathf.Abs(holderRb.velocity.x) >= 0.5f)
+                    {
+                        dragBalloons(maxMoveSpeed);
+                    }
+                    else if (!BalloonHasBurst)
+                    {
+                        floatingBalloons();
+                    }
                 }
             }
+ 
         }
         else
         {

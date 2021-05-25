@@ -1278,7 +1278,7 @@ PrefabInstance:
     - target: {fileID: 5026395309585139539, guid: fac34f2b9ece0334d833bb4498101ce9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5026395309585139540, guid: fac34f2b9ece0334d833bb4498101ce9,
         type: 3}
@@ -1349,35 +1349,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1270306192}
     m_Modifications:
-    - target: {fileID: 4014197250972468320, guid: 82bd1ad81773b3c458bf44320ad77cbc,
-        type: 3}
-      propertyPath: emotion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381127539251070193, guid: 82bd1ad81773b3c458bf44320ad77cbc,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381127539251070193, guid: 82bd1ad81773b3c458bf44320ad77cbc,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381127539251070193, guid: 82bd1ad81773b3c458bf44320ad77cbc,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6381127539647737099, guid: 82bd1ad81773b3c458bf44320ad77cbc,
         type: 3}
       propertyPath: m_Name
       value: Joy Pop VFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381127539647737099, guid: 82bd1ad81773b3c458bf44320ad77cbc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6381127539647737100, guid: 82bd1ad81773b3c458bf44320ad77cbc,
         type: 3}
@@ -1432,21 +1407,6 @@ PrefabInstance:
     - target: {fileID: 6381127539647737100, guid: 82bd1ad81773b3c458bf44320ad77cbc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381127539939387241, guid: 82bd1ad81773b3c458bf44320ad77cbc,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381127539939387241, guid: 82bd1ad81773b3c458bf44320ad77cbc,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381127539939387241, guid: 82bd1ad81773b3c458bf44320ad77cbc,
-        type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
