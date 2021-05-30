@@ -8844,12 +8844,12 @@ PrefabInstance:
     - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
         type: 3}
       propertyPath: joyEffectCooldown
-      value: 4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
         type: 3}
       propertyPath: joyEffectDuration
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
         type: 3}
@@ -8864,7 +8864,7 @@ PrefabInstance:
     - target: {fileID: 3644744798857867622, guid: aa69eec6aaf48444eb5de5026af087c5,
         type: 3}
       propertyPath: angerEffectCooldown
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69eec6aaf48444eb5de5026af087c5, type: 3}
