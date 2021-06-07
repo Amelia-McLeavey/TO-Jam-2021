@@ -47,36 +47,32 @@ public class CollisionEffect : MonoBehaviour
     IEnumerator SetupEmotion() {
         yield return new WaitForEndOfFrame();
 
+        Color tempColor;
         if (emotion == Emotion.Joy) {
             duration = joyDuration;
-            Color color = joyColor;
-            color.a = 0;
-            meshRenderer.material.SetColor("_EffectColor", color);
-            maxAlpha = joyColor.a;
-            transform.GetChild(0).gameObject.SetActive(true);
+            tempColor = joyColor;
         }
         else if (emotion == Emotion.Sadness) {
             duration = sadDuration;
-            Color color = sadColor;
-            color.a = 0;
-            meshRenderer.material.SetColor("_EffectColor", color);
-            maxAlpha = sadColor.a;
-            transform.GetChild(1).gameObject.SetActive(true);
+            tempColor = sadColor;
         }
-        else if (emotion == Emotion.Anger) {
+        else {
             duration = angerDuration;
-            Color color = angerColor;
-            color.a = 0;
-            meshRenderer.material.SetColor("_EffectColor", color);
-            maxAlpha = angerColor.a;
-            transform.GetChild(2).gameObject.SetActive(true);
+            tempColor = angerColor;
         }
+        maxAlpha = tempColor.a;
+        tempColor.a = 0;
+        meshRenderer.material.SetColor("_EffectColor", tempColor);
         meshRenderer.material.SetTexture("_Noise", noiseTexture);
 
-
+        tempColor.a = 1;
         //reposition particle systems cause scaling screws them up
-        for (int i = 0; i < 3; i++) {
-            transform.GetChild(i).position = transform.position + transform.up * 2;
+        for (int i = 0; i < transform.childCount; i++) {
+            //transform.GetChild(i).position = transform.position + transform.up * 2;
+            ParticleSystem ps = transform.GetChild(i).GetComponent<ParticleSystem>();
+            if (ps) {
+                ps.startColor = tempColor;
+            }
         }
     }
     

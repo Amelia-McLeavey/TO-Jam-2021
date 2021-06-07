@@ -8,7 +8,8 @@ public class ParticleClipSetup : MonoBehaviour
     public float maxRadius = 5f;
     [SerializeField][Range(0,1)] float radiusPercent = 0;
     private float radius { get { return maxRadius * radiusPercent; } }
-    
+    [SerializeField] [Range(0, 1)] float colourAlpha = 1;
+
     [SerializeField] Material[] mats;
     [SerializeField] Transform[] radiiObjects;
     [SerializeField] Transform[] maxRadiiObjects;
@@ -41,12 +42,18 @@ public class ParticleClipSetup : MonoBehaviour
 
         for (int i = 0; i < mats.Length; i++) {
             mats[i].SetVector("_RenderSphere", new Vector4(transform.position.x, transform.position.y, transform.position.z, radius));
+            Color col = mats[i].GetColor("_Color");
+            col.a = colourAlpha;
+            mats[i].SetColor("_Color", col);
         }
     }
 
     public void ResetMaterials() {
         for (int i = 0; i < mats.Length; i++) {
             mats[i].SetVector("_RenderSphere", new Vector4(0, 0, -1000, 0));
+            Color col = mats[i].GetColor("_Color");
+            col.a = 1;
+            mats[i].SetColor("_Color", col);
         }
     }
 }
