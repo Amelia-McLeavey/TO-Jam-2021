@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ColourShiftController : MonoBehaviour 
 {
-    [SerializeField] float maxAlpha = 1;
     [Range(0, 1)] public float alphaPercent = 0;
 
     Material mat;
@@ -12,12 +11,10 @@ public class ColourShiftController : MonoBehaviour
 
     private void Start() {
         mat = GetComponent<MeshRenderer>().material;
-        color = mat.GetColor("_Color");
     }
 
     void Update()
     {
-        color.a = maxAlpha * alphaPercent;
-        mat.SetColor("_Color", color);
+        mat.SetFloat("_Alpha", alphaPercent);
     }
 }

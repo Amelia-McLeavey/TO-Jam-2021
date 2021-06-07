@@ -29,7 +29,7 @@ public class EffectSpawner : MonoBehaviour
             if (platform == null) {
                 continue;
             }
-
+            
             bool isInteractable = false;
             isInteractable = emotion == Emotion.Anger && (platform._type == "Shove" || platform._type == "Universal") ? true : isInteractable;
             isInteractable = emotion == Emotion.Joy && (platform._type == "Float" || platform._type == "Universal") ? true : isInteractable;
