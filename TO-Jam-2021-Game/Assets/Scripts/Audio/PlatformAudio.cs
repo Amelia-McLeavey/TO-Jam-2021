@@ -12,6 +12,8 @@ public class PlatformAudio : MonoBehaviour
 
     public void PlayRock(int actionType,float duration)
     {
+        StopRockingOut();
+
         switch (actionType)
         {
             case 0:
